@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Allow: /games
+Allow: /contribute
+Allow: /leaderboards
+Allow: /search
+Allow: /advertise
+
+Disallow: /admin
+Disallow: /account-settings
+Disallow: /my-lists
+
+# Crawl-delay to be polite to search engines
+Crawl-delay: 10
+
+# Add your sitemap location
+Sitemap: https://metroidvania.com/sitemap.xml
