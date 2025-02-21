@@ -1,8 +1,8 @@
 <template>
   <div class="flex flex-col justify-between">
     <div class="relative z-0" @click="handleCloseMenus">
-      <LayoutHeader />
-      <div class="max-w-screen-2xl mx-auto px-3 py-16 md:py-24">
+      <LayoutNavigation />
+      <div class="max-w-screen-2xl mx-auto">
         <slot />
       </div>
     </div>

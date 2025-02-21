@@ -1,72 +1,84 @@
 <template>
-  <h2 class="page-header">
-    About <span class="text-secondary">MetroidvaniaDB</span
-    ><span class="text-primary">DB</span>
-  </h2>
-  <div class="details">
-    <div class="col-span-6">
-      <h3 class="page-subheader">What is a Metroidvania?</h3>
+  <div>
+    <LayoutPageHeader header="About" />
+    <p class="mx-auto text-center">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione fuga
+      porro incidunt magnam dolorem! Commodi sequi ab delectus quisquam quia
+      unde officia ut vel porro, exercitationem aut consequatur culpa dolore
+      tempore laudantium deleniti? Ullam, assumenda!
+    </p>
+    <div
+      class="relative md:grid grid-cols-12 gap-3 max-w-screen-2xl mx-auto my-12 px-3"
+    >
+      <div class="col-span-6 flex flex-col gap-3">
+        <img
+          class="image-container h-96 md:sticky top-24"
+          src="~/public/images/mountains.webp"
+          alt=""
+        />
+      </div>
+      <div class="md:border-l md:pl-3 col-span-6">
+        <h2>Header Two</h2>
+        <br />
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi
+          aliquam ipsa ipsum perspiciatis perferendis, aliquid, consectetur
+          sequi autem voluptate alias pariatur fugiat porro quod molestiae
+          distinctio? Modi voluptatum totam eius impedit quam fugiat! In magni
+          sed minima sunt fugiat enim consequuntur sapiente blanditiis quia
+          quam?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+          numquam eaque placeat magnam fugit, dolorem ab eum voluptate in
+          assumenda iusto. Odio quasi quo quidem iste voluptatibus adipisci
+          voluptate cum?
+        </p>
+        <br />
+        <h3>Header Three</h3>
+        <br />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, et
+          facilis doloribus illo aspernatur ex?
+        </p>
+        <br />
+        <h4>Header Four</h4>
+        <br />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, nobis.
+        </p>
+        <br />
+        <ul class="list-disc">
+          <li><p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p></li>
+          <li>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+          </li>
+          <li>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea sint
+              debitis in!
+            </p>
+          </li>
+          <li><p>Lorem ipsum dolor sit amet consectetur adipisicing.</p></li>
+          <li>
+            <p>Lorem ipsum dolor sit.</p>
+          </li>
+          <li>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
+              dolorem! Deserunt molestias aliquid nam nobis?
+            </p>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="col-span-6">
-      <p>
-        A metroidvania is subgenre of video games characterized by an emphasis
-        on skill-gated exploration, character progression, and oftentimes
-        platforming puzzles. It is most commonly applied to 2D sidescrollilng
-        games, though some have expanded their understanding of the genre to
-        include games that have managed to capture the mysterious spirit of the
-        original metroidvanias.
-      </p>
-      <br />
-      <p>
-        While the exact definition of the term is still debated, we have decided
-        to include any games that fit what we consdier to be the spirit of the
-        Metroidvania. For this reason, we have opted to include titles such as
-        those in the Dark Souls franchise and other non-2D games that capture
-        the essence of the metroidvania.
-      </p>
-      <br />
-      <p></p>
-    </div>
-    <div class="col-span-6">
-      <h3 class="page-subheader">About this site</h3>
-    </div>
-    <div class="col-span-6">
-      <p>
-        {{ siteName }} is a wiki-style database for metroidvania video games. We
-        allow and encourage users to submit their own game listings as well as
-        edit existing ones.
-      </p>
-    </div>
-
-    <div class="col-span-6">
-      <h3 class="page-subheader">List of Properties</h3>
-    </div>
-    <div class="col-span-6">
-      <ul>
-        <li v-for="option in propertyOptions" :key="option">
-          <p>
-            {{ option }}
-          </p>
-        </li>
-      </ul>
-    </div>
-    <div class="col-span-6">
-      <h3 class="page-subheader">List of Tags</h3>
-    </div>
-    <div class="col-span-6">
-      <ul>
-        <li v-for="option in tagOptions" :key="option">
-          <p class="hover:text-primary">
-            <NuxtLink :to="`/search?tag=` + option">{{ option }}</NuxtLink>
-          </p>
-        </li>
-      </ul>
-    </div>
+    <p class="text-5xl text-center max-w-[35ch] mx-auto px-3 my-24">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut sed possimus
+      corporis aliquid tempora repellat!
+    </p>
   </div>
 </template>
 
-<script setup>
-import { propertyOptions, siteName, tagOptions } from "~/data";
-</script>
+<script setup></script>
 
-<style scoped></style>
+<style lang="scss" scoped></style>

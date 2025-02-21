@@ -2,31 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --color-background: #110d17;
-  --color-background-accent: #343633;
-
-  /* palette one */
-  --color-primary: #ffd131;
-  --color-secondary: #ff1053;
-
-  --color-text: #f7f4f0;
-  --color-text-muted: #afaca9;
-  --color-dark: #080f0f;
-  --color-dark-muted: #2c2c2c;
-  --color-dark-muted-hover: #424242;
-}
-
 * {
   scroll-behavior: smooth;
+  @apply border-border dark:border-borderDarkMode;
+}
+
+:root {
+  --color: #c1c1c1;
 }
 
 body {
-  @apply bg-background;
-}
-
-section {
-  @apply py-12 md:py-24;
+  @apply bg-light dark:bg-backgroundAccentDarkMode;
 }
 
 h1,
@@ -35,37 +21,15 @@ h3,
 h4,
 h5,
 h6 {
-  @apply text-text;
-}
-
-h1 {
-  font-size: 1.5rem;
-}
-
-h2 {
-  @apply font-header uppercase tracking-tighter font-extrabold text-3xl;
-  word-spacing: 0.15em;
-  line-height: 1;
-}
-
-h3 {
-  @apply font-header font-extrabold text-xl md:text-3xl mb-3;
-}
-
-h4 {
-  @apply font-header font-semibold text-lg uppercase;
-}
-
-h6 {
-  @apply text-sm font-bold uppercase text-lightMuted;
+  @apply font-header text-xl dark:text-light  font-bold;
 }
 
 p {
-  @apply max-w-prose font-sans tracking-tight text-text;
+  @apply max-w-prose font-sans dark:text-light;
 }
 
 li {
-  @apply max-w-prose font-sans ml-5 tracking-tight text-lightMuted;
+  @apply max-w-prose font-sans ml-5;
 }
 
 hr {
@@ -75,11 +39,7 @@ hr {
 input[type="text"],
 select,
 textarea {
-  @apply w-full  focus:outline-none bg-white p-1 rounded;
-}
-
-input[type="checkbox"] {
-  accent-color: var(--color-primary);
+  @apply w-full  border-b py-2 text-lg;
 }
 
 label {
@@ -88,7 +48,7 @@ label {
 
 @layer components {
   .page-header {
-    @apply mb-4 mt-12 text-primary text-xl md:text-3xl;
+    @apply mb-4 mt-12 text-xl md:text-3xl;
   }
   .page-subheader {
     @apply border-t mt-12 md:mt-0;
@@ -100,7 +60,7 @@ label {
     @apply md:grid grid-cols-12 mx-auto mt-8 max-w-5xl gap-8;
   }
   .btn {
-    @apply py-2 px-3 w-fit text-center cursor-pointer bg-secondary duration-100 text-white rounded uppercase;
+    @apply py-2 px-3 w-fit text-center cursor-pointer bg-secondary dark:bg-light duration-100 text-white dark:text-dark rounded;
   }
   .btn-disabled {
     @apply cursor-not-allowed bg-gray-400;
@@ -109,11 +69,11 @@ label {
     @apply bg-backgroundAccent rounded p-3 border;
   }
   .input-wrapper {
-    @apply border-darkMuted bg-white border p-1 rounded;
+    @apply bg-white border py-1 px-2 rounded;
   }
 
   .link {
-    @apply hover:text-primary transition;
+    @apply hover:text-primary dark:hover:text-primaryDarkMode transition;
   }
 
   .btn:hover {
@@ -153,4 +113,16 @@ label {
 @font-face {
   font-family: Mulish;
   src: url("~/assets/fonts/Mulish.woff2") format("woff2");
+}
+@font-face {
+  font-family: Ysabeau;
+  src: url("~/assets/fonts/Ysabeau.woff2") format("woff2");
+}
+@font-face {
+  font-family: Gistesy;
+  src: url("~/assets/fonts/Gistesy.woff2") format("woff2");
+}
+@font-face {
+  font-family: Roxborough;
+  src: url("~/assets/fonts/Roxborough.woff2") format("woff2");
 }

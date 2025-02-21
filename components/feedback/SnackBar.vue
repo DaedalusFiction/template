@@ -11,11 +11,11 @@ const snackbarShowing = useState("snackbarShowing");
 
 <style scoped>
 .snackbar {
+  @apply bg-secondary dark:bg-secondaryDarkMode;
   position: fixed;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--color-secondary);
   color: white;
   padding: 16px;
   border-radius: 4px;

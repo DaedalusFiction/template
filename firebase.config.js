@@ -4,13 +4,13 @@ import { getStorage } from "firebase/storage";
 import { GoogleAuthProvider, getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAnDH4tMTozjkbiBORbaI9MODJzCA8Q9zY",
-  authDomain: "metroidvaniadatabase.firebaseapp.com",
-  projectId: "metroidvaniadatabase",
-  storageBucket: "metroidvaniadatabase.appspot.com",
-  messagingSenderId: "718247512374",
-  appId: "1:718247512374:web:878155cd155198d8464b97",
-  measurementId: "G-E4YC14RF1L",
+  apiKey: "AIzaSyDzWtfwnNhIFsypHlshbCyEqQKe23LgDnY",
+  authDomain: "template-eb525.firebaseapp.com",
+  projectId: "template-eb525",
+  storageBucket: "template-eb525.firebasestorage.app",
+  messagingSenderId: "289606159742",
+  appId: "1:289606159742:web:8dbb03eede55b95e85b72f",
+  measurementId: "G-SXZDVWQGZX",
 };
 
 const app = initializeApp(firebaseConfig);

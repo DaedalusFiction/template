@@ -5,7 +5,7 @@
       type="text"
       placeholder="Search"
       v-model="searchValue"
-      class="focus:outline-none"
+      class="border-white ml-1 focus:outline-none"
       @keyup.enter="handleSearch"
     />
     <IconsCancelCircle

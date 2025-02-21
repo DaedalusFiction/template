@@ -75,6 +75,6 @@ const filterTags = () => {
 
 <style scoped>
 .chip {
-  @apply p-1 pl-2 flex gap-1 items-center border border-black bg-primary rounded-full;
+  @apply p-1 pl-2 flex gap-1 items-center border border-black bg-primary dark:bg-primaryDarkMode rounded-full;
 }
 </style>

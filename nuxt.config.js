@@ -15,24 +15,12 @@ export default defineNuxtConfig({
 
   sitemap: {
     // exclude all URLs that start with /secret
-    exclude: ["/admin/**", "/account/**", "/my-lists/**"],
+    exclude: ["/admin/**"],
     // include all URLs that start with /public
-    include: [
-      "/games/**",
-      "/",
-      "/about",
-      "/advertise",
-      "/contribute",
-      "/index",
-      "/privacy-policy",
-      "/search",
-      "/leaderboard",
-    ],
+    include: ["/", "/about", "/index", "/search"],
   },
 
-  runtimeConfig: {
-    EMAIL: process.env.NUXT_METROIDVANIA_SECRET_CLAUDE,
-  },
+  runtimeConfig: {},
 
   app: {
     head: {

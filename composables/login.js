@@ -23,7 +23,7 @@ export default async function useLogin() {
             isBanned: false,
             email: result.user.email,
             contributions: 0,
-            displayName: "BSDB User",
+            displayName: "Template User",
           });
           const userRef = doc(db, "users", result.user.uid);
           const userRefSnap = await getDoc(userRef);
