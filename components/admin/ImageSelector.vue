@@ -8,7 +8,7 @@
         alt=""
       />
       <div v-else class="bg-gray-300 border flex items-center p-2">
-        <p class="text-center">No Image Selected</p>
+        <p class="text-center dark:text-darkMuted">No Image Selected</p>
       </div>
     </div>
     <div>
@@ -20,7 +20,7 @@
         type="file"
         @change="handleSelectImage"
       />
-      <p class="text-xs italic">
+      <p class="text-xs italic dark:text-dark">
         File name must end in .jpg, .jpeg, or .webp. Maximum file size: 1MB
       </p>
     </div>

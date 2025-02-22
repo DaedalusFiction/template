@@ -6,7 +6,9 @@
         :class="'bg-[linear-gradient(to_bottom,rgba(17,13,23,0),rgba(17,13,23,0)),url(~/public/images/mountains.webp)]'"
       >
         <div class="px-3">
-          <h1 class="text-light text-5xl md:text-7xl font-bold">Header One</h1>
+          <h1 class="text-light text-5xl md:text-7xl font-bold accent">
+            Header One
+          </h1>
           <p class="text-lightMuted">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi
             consequatur ducimus eum repellendus? Eligendi porro earum vel nobis

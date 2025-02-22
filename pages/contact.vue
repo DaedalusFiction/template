@@ -12,15 +12,21 @@
 
         <div class="flex flex-col md:grid grid-cols-12 gap-6">
           <div class="col-span-6">
-            <h6 class="text-xs font-medium text-darkMuted">Call us</h6>
+            <h6 class="text-xs font-medium text-darkMuted dark:text-lightMuted">
+              Call us
+            </h6>
             <p class="text-xl">(123) 555-9876</p>
           </div>
           <div class="col-span-6">
-            <h6 class="text-xs font-medium text-darkMuted">Email us</h6>
+            <h6 class="text-xs font-medium text-darkMuted dark:text-lightMuted">
+              Email us
+            </h6>
             <p class="text-xl">hello@fictionalweb.com</p>
           </div>
           <div class="col-span-6">
-            <h6 class="text-xs font-medium text-darkMuted">Follow us</h6>
+            <h6 class="text-xs font-medium text-darkMuted dark:text-lightMuted">
+              Follow us
+            </h6>
             <div>
               <p class="text-xl">Instagram</p>
             </div>
@@ -32,7 +38,9 @@
             </div>
           </div>
           <div class="col-span-6">
-            <h6 class="text-xs font-medium text-darkMuted">Fax us</h6>
+            <h6 class="text-xs font-medium text-darkMuted dark:text-lightMuted">
+              Fax us
+            </h6>
             <p class="text-xl">please don't</p>
           </div>
         </div>
@@ -47,7 +55,7 @@
             id="name"
             required
             type="text"
-            class="placeholder-dark bg-inherit"
+            class="placeholder-dark dark:placeholder-light bg-inherit"
           />
           <label class="hidden" for="email">Email</label>
           <input
@@ -56,7 +64,7 @@
             placeholder="Email"
             id="email"
             required
-            class="placeholder-dark bg-inherit"
+            class="placeholder-dark dark:placeholder-light bg-inherit"
           />
           <label class="hidden" for="email">Email</label>
           <textarea
@@ -114,4 +122,4 @@ const handleSubmitContactForm = () => {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>

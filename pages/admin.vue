@@ -5,19 +5,21 @@
         Sign In
       </button>
       <div v-else class="md:grid min-h-screen grid-cols-12 border">
-        <div class="col-span-2 border-r bg-backgroundAccent">
+        <div
+          class="col-span-2 border-r bg-backgroundAccent dark:bg-backgroundAccentDarkMode"
+        >
           <div
             v-for="menuItem in menu"
             @click="selectedPanel = menuItem.name"
             :key="menuItem.name"
-            class="transition hover:bg-background flex gap-2 w-full max-w-full p-2 cursor-pointer"
+            class="transition hover:bg-backgroundDarkMode flex gap-2 w-full max-w-full p-2 cursor-pointer"
             :class="
               menuItem.name === selectedPanel
-                ? 'bg-background'
-                : 'bg-backgroundAccent'
+                ? 'bg-background dark:bg-backgroundDarkMode'
+                : 'bg-backgroundAccent dark:bg-backgroundAccentDarkMode'
             "
           >
-            <component :is="menuItem.icon" class="w-5" />
+            <component :is="menuItem.icon" class="w-5 dark:stroke-white" />
             <p>{{ menuItem.name }}</p>
           </div>
         </div>

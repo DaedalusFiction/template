@@ -46,7 +46,7 @@
             <input
               type="text"
               v-model="email"
-              class="placeholder-black bg-inherit"
+              class="placeholder-black dark:placeholder-white bg-inherit"
               placeholder="Enter your email..."
             />
             <button @click="handleSubscribe" class="btn">Subscribe</button>

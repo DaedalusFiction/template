@@ -5,8 +5,7 @@
       fill="none"
       viewBox="0 0 24 24"
       stroke-width="1.5"
-      :stroke="props.color || currentColor"
-      class="w-6 h-6 navigationOptions"
+      class="w-6 h-6 navigationOptions stroke-black dark:stroke-white"
     >
       <path
         class="navigationOptions"
@@ -18,8 +17,6 @@
   </div>
 </template>
 
-<script setup>
-const props = defineProps(["color"]);
-</script>
+<script setup></script>
 
 <style scoped></style>

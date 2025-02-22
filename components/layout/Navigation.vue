@@ -41,7 +41,7 @@
           class="navigationOptions text-2xl font-extrabold text-white"
           @click="handleExpandNavigation"
         >
-          <IconsHamburger class="navigationOptions" color="black" />
+          <IconsHamburger class="navigationOptions" />
         </button>
         <NuxtLink to="/" class="link flex gap-2 items-center">
           <h1
@@ -61,7 +61,9 @@
 
     <div
       class="flex xl:hidden p-3 transition searchBar"
-      :class="searchExpanded && 'bg-background dark:bg-backgroundAccent'"
+      :class="
+        searchExpanded && 'bg-background dark:bg-backgroundAccentDarkMode'
+      "
     >
       <InputMobileSearchBar
         class="searchBar"
