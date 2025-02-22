@@ -130,3 +130,11 @@ label {
   font-family: Roxborough;
   src: url("~/assets/fonts/Roxborough.woff2") format("woff2");
 }
+@font-face {
+  font-family: Montserrat;
+  src: url("~/assets/fonts/Montserrat.woff2") format("woff2");
+}
+@font-face {
+  font-family: Jost;
+  src: url("~/assets/fonts/Jost.woff2") format("woff2");
+}

@@ -2,10 +2,18 @@ module.exports = {
   theme: {
     //
     fontFamily: {
+      // Restaurant
+      // header: ["Jost", "sans-serif"],
+      // sans: ["Montserrat", "sans-serif"],
+
+      // Modern
       header: ["Inter", "sans-serif"],
       sans: ["Ysabeau", "sans-serif"],
+
+      // Fancy
       // header: ["Gistesy", "sans-serif"],
       // sans: ["Roxborough", "sans-serif"],
+
       serif: ["EBGaramond", "serif"],
     },
     extend: {
