@@ -48,7 +48,7 @@
 import { deleteDoc, doc } from "firebase/firestore";
 const emit = defineEmits(["update"]);
 import useUploadDocument from "~/composables/admin/uploadDocument";
-import useUpdateDocument from "~/composables/admin/useUpdateDocument";
+import useUpdateDocument from "~/composables/admin/updateDocument";
 import useSnackbar from "~/composables/showSnackbar";
 import { db } from "~/firebase.config";
 const { article } = defineProps(["article"]);

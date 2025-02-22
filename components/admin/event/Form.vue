@@ -9,6 +9,10 @@
       <input id="time" v-model="formData.time" required type="text" />
     </div>
     <div class="mb-4">
+      <label for="href"> Link </label>
+      <input id="href" v-model="formData.href" required type="text" />
+    </div>
+    <div class="mb-4">
       <label for="date"> Date </label>
       <input
         id="date"
@@ -49,7 +53,7 @@
 import { deleteDoc, doc } from "firebase/firestore";
 const emit = defineEmits(["update"]);
 import useUploadDocument from "~/composables/admin/uploadDocument";
-import useUpdateDocument from "~/composables/admin/useUpdateDocument";
+import useUpdateDocument from "~/composables/admin/updateDocument";
 import useSnackbar from "~/composables/showSnackbar";
 import { db } from "~/firebase.config";
 const { event } = defineProps(["event"]);
@@ -58,6 +62,7 @@ const emptyForm = {
   location: "",
   time: "",
   date: "",
+  href: "",
   description: "",
 };
 const formData = ref(emptyForm);
@@ -67,11 +72,12 @@ onMounted(() => {
   console.log(event);
   if (event) {
     formData.value = {
-      title: event.data().title,
-      location: event.data().location,
-      time: event.data().time,
-      date: event.data().date,
-      description: event.data().description,
+      title: event.data().title || "",
+      location: event.data().location || "",
+      time: event.data().time || "",
+      href: event.data().href || "",
+      date: event.data().date || "",
+      description: event.data().description || "",
     };
   }
 });

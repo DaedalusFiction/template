@@ -26,6 +26,7 @@
           <AdminArticleList v-if="selectedPanel === 'Articles'" />
           <AdminContributorList v-if="selectedPanel === 'Contributors'" />
           <AdminBookList v-if="selectedPanel === 'Portfolio'" />
+          <AdminVideoList v-if="selectedPanel === 'Videos'" />
         </div>
       </div>
     </div>
@@ -50,6 +51,7 @@ const menu = ref([
   { name: "Articles", icon: bookIcon },
   { name: "Contributors", icon: userIcon },
   { name: "Portfolio", icon: userIcon },
+  { name: "Videos", icon: userIcon },
 ]);
 const selectedPanel = ref("Events");
 
