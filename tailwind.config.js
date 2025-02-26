@@ -7,8 +7,8 @@ module.exports = {
       // sans: ["Montserrat", "sans-serif"],
 
       // Modern
-      header: ["Inter", "sans-serif"],
-      sans: ["Ysabeau", "sans-serif"],
+      header: ["Montserrat", "sans-serif"],
+      sans: ["Varta", "sans-serif"],
 
       // Fancy
       // header: ["Gistesy", "sans-serif"],

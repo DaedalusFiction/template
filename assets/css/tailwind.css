@@ -21,11 +21,11 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-header text-xl dark:text-light  font-bold;
+  @apply font-header text-xl dark:text-light uppercase;
 }
 
 p {
-  @apply max-w-prose font-sans dark:text-light;
+  @apply max-w-prose font-serif dark:text-light;
 }
 
 li {
@@ -73,7 +73,7 @@ label {
   }
 
   .accent {
-    font-family: Gistesy;
+    font-family: Inter;
   }
 
   .link {
@@ -137,4 +137,8 @@ label {
 @font-face {
   font-family: Jost;
   src: url("~/assets/fonts/Jost.woff2") format("woff2");
+}
+@font-face {
+  font-family: Varta;
+  src: url("~/assets/fonts/Varta.woff2") format("woff2");
 }
