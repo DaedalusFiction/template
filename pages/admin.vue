@@ -12,7 +12,7 @@
             v-for="menuItem in menu"
             @click="selectedPanel = menuItem.name"
             :key="menuItem.name"
-            class="transition hover:bg-backgroundDarkMode flex gap-2 w-full max-w-full p-2 cursor-pointer"
+            class="transition hover:bg-background dark:hover:bg-backgroundAccentDarkMode flex gap-2 w-full max-w-full p-2 cursor-pointer"
             :class="
               menuItem.name === selectedPanel
                 ? 'bg-background dark:bg-backgroundDarkMode'

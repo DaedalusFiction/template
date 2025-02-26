@@ -19,4 +19,14 @@ const socialMediaLinks = [
   { title: "Instagram", href: "https://Instagram.com" },
 ];
 
-export { GTag, siteName, siteDescription, siteURL, pages, socialMediaLinks };
+const telephone = "4348255038";
+
+export {
+  GTag,
+  siteName,
+  siteDescription,
+  siteURL,
+  pages,
+  socialMediaLinks,
+  telephone,
+};

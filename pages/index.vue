@@ -24,19 +24,70 @@
       </div>
     </section>
     <!-- Three Image Panel -->
-    <section>
+    <section class="max-w-screen-lg mx-auto">
       <div class="px-3 md:px-6">
         <h2 class="mb-3 md:text-5xl text-darkMuted dark:text-lightMuted">
-          Header Two
+          Our Menu
         </h2>
         <div class="md:grid grid-cols-12 gap-6">
           <div
-            v-for="(card, index) in threeCardPanel"
+            v-for="(card, index) in menuPreview"
             :key="index"
-            class="col-span-4 pb-6"
+            class="col-span-4"
           >
             <LayoutCard :card="card" />
           </div>
+        </div>
+
+        <div class="flex justify-end">
+          <p>
+            <NuxtLink class="link" to="/menu"
+              >Explore Full Menu <span class="text-2xl">&rarr;</span></NuxtLink
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="pt-12">
+      <h3 class="text-3xl md:text-5xl mb-6 text-center">Catering</h3>
+      <div class="max-w-screen-lg mx-auto px-3 grid grid-cols-12 gap-6">
+        <div class="col-span-6 bg-white border rounded-md">
+          <NuxtLink to="/contact">
+            <div
+              class="image-container hover:brightness-110 transition cursor-pointer h-56"
+            >
+              <img src="/public/images/poke7.webp" alt="" />
+            </div>
+            <div class="p-3">
+              <h3 class="text-3xl mb-2">Buffet-style</h3>
+              <ul class="list-disc">
+                <li><p>For 10-50 people</p></li>
+                <li><p>Select a variety of proteins and sides</p></li>
+                <li><p>Build your own bowls</p></li>
+                <li><p>Minimum 24-hour notice</p></li>
+              </ul>
+              <p class="btn w-full mt-2">Inquire</p>
+            </div>
+          </NuxtLink>
+        </div>
+        <div class="col-span-6 bg-white border rounded-md">
+          <NuxtLink to="/contact">
+            <div
+              class="image-container hover:brightness-110 transition cursor-pointer h-56"
+            >
+              <img src="/public/images/poke6.webp" alt="" />
+            </div>
+            <div class="p-3">
+              <h3 class="text-3xl mb-2">Group Orders</h3>
+              <ul class="list-disc">
+                <li><p>For up to 15 people</p></li>
+                <li><p>Each person orders separately</p></li>
+                <li><p>One payment</p></li>
+                <li><p>Order and enjoy today!</p></li>
+              </ul>
+              <p class="btn w-full mt-2">Inquire</p>
+            </div>
+          </NuxtLink>
         </div>
       </div>
     </section>
@@ -128,6 +179,7 @@ import {
   largePanelOne,
   largePanelThree,
   largePanelTwo,
+  menuPreview,
   textPanelOne,
   threeCardPanel,
 } from "~/content/home";

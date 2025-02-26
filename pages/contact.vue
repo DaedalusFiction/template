@@ -15,7 +15,12 @@
             <h6 class="text-xs font-medium text-darkMuted dark:text-lightMuted">
               Call us
             </h6>
-            <p class="text-xl">(123) 555-9876</p>
+
+            <p class="text-xl link">
+              <a :href="`tel:` + telephone">{{
+                useFormatTelephone(telephone)
+              }}</a>
+            </p>
           </div>
           <div class="col-span-6">
             <h6 class="text-xs font-medium text-darkMuted dark:text-lightMuted">
@@ -94,7 +99,8 @@ const name = ref("");
 const email = ref("");
 const comment = ref("");
 import emailjs from "@emailjs/browser";
-import { siteName } from "~/data";
+import useFormatTelephone from "~/composables/formatting/formatTelephone";
+import { siteName, telephone } from "~/data";
 
 const handleSubmitContactForm = () => {
   isButtonDisabled.value = true;
