@@ -1,5 +1,10 @@
 <template>
   <header class="fixed w-full top-0 z-20">
+    <div v-if="bannerMessage" class="bg-primary p-2">
+      <p class="max-w-full text-center text-light">
+        {{ bannerMessage }}
+      </p>
+    </div>
     <div class="bg-backgroundAccent dark:bg-backgroundAccentDarkMode">
       <div class="hidden xl:grid grid-cols-12 px-4 py-2 mx-auto">
         <div class="col-span-7 flex gap-4 items-center">
@@ -110,15 +115,18 @@
 </template>
 
 <script setup>
+import { doc, getDoc } from "firebase/firestore";
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import useLogin from "~/composables/login";
 import { pages } from "~/data";
+import { db } from "~/firebase.config";
 
 const firebaseUser = useState("firebaseUser");
 const googleUser = useState("googleUser");
 const navigationExpanded = useState("navigationExpanded");
 const profileOptionsExpanded = useState("profileOptionsExpanded");
 const searchExpanded = useState("searchExpanded");
+const bannerMessage = ref("");
 
 const isScrolled = ref(false);
 
@@ -140,8 +148,12 @@ const handleExpandSearch = () => {
   searchExpanded.value = !searchExpanded.value;
 };
 
-onMounted(() => {
+onMounted(async () => {
   window.addEventListener("scroll", handleScroll);
+  const bannerRef = doc(db, "restaurant", "banner");
+  const bannerMessageTask = await getDoc(bannerRef);
+  console.log(bannerMessageTask.data().message);
+  bannerMessage.value = bannerMessageTask.data().message;
 });
 
 onBeforeUnmount(() => {

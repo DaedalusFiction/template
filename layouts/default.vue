@@ -1,6 +1,7 @@
 <template>
   <div class="flex flex-col justify-between">
     <div class="relative z-0" @click="handleCloseMenus">
+      <
       <LayoutNavigation />
       <div class="max-w-screen-2xl mx-auto">
         <slot />
