@@ -50,7 +50,9 @@
     </section>
     <section class="pt-12">
       <h3 class="text-3xl md:text-5xl mb-6 text-center">Catering</h3>
-      <div class="max-w-screen-lg mx-auto px-3 grid grid-cols-12 gap-6">
+      <div
+        class="max-w-screen-lg mx-auto px-3 flex flex-col md:grid grid-cols-12 gap-6"
+      >
         <div class="col-span-6 bg-white border rounded-md">
           <NuxtLink to="/contact">
             <div
@@ -160,6 +162,46 @@
       </p>
       <br />
       <div class="flex justify-center"><button class="btn">Button</button></div>
+    </section>
+    <section class="px-3 md:px-0">
+      <div
+        class="max-w-screen-xl mx-auto px-3 py-12 sm:p-16 md:px-16 md:py-28 md:mb-52 bg-light dark:bg-backgroundDarkMode"
+      >
+        <div
+          class="relative bg-backgroundAccent dark:bg-backgroundAccentDarkMode px-3 py-12 md:p-12"
+        >
+          <h4
+            class="accent text-3xl md:text-5xl font-extrabold absolute top-0 rotate-[-6deg] translate-y-[-25px] md:translate-y-[-30px]"
+          >
+            Header Six
+          </h4>
+          <div class="flex flex-col md:grid grid-cols-12 gap-6">
+            <div class="flex flex-col col-span-8 gap-3 justify-center">
+              <p class="md:text-xl">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                libero cum nulla, maxime nostrum magni.
+              </p>
+              <p class="btn">
+                <NuxtLink to="/about">Button</NuxtLink>
+              </p>
+              <br />
+              <p class="md:text-xl">
+                Lorem, ipsum dolor sit amet consectetur adipisicing.
+              </p>
+              <p class="btn">
+                <NuxtLink to="/contact">Button</NuxtLink>
+              </p>
+            </div>
+            <div class="col-span-4 relative">
+              <img
+                src="/public/images/mobyDick.jpg"
+                class="md:absolute md:block md:top-0 md:w-full md:border-[20px] border-white"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </div>
 </template>
