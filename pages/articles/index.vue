@@ -2,7 +2,7 @@
   <div>
     <LayoutPageHeader header="Articles" />
 
-    <div class="md:grid grid-cols-12 max-w-screen-2xl gap-3 px-3 mx-auto pt-3">
+    <div class="md:grid grid-cols-12 max-w-screen-xl gap-3 px-3 mx-auto pt-3">
       <div
         v-for="(article, index) in articles"
         :key="index"

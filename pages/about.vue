@@ -8,11 +8,11 @@
       tempore laudantium deleniti? Ullam, assumenda!
     </p>
     <div
-      class="relative md:grid grid-cols-12 gap-3 max-w-screen-2xl mx-auto my-12 px-3"
+      class="relative flex flex-col md:grid grid-cols-12 gap-3 max-w-screen-2xl mx-auto my-12 px-3"
     >
       <div class="col-span-6 flex flex-col gap-3">
         <img
-          class="image-container h-96 md:sticky top-24"
+          class="image-container h-96 md:sticky md:top-24"
           src="~/public/images/mountains.webp"
           alt=""
         />
@@ -48,7 +48,7 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, nobis.
         </p>
         <br />
-        <ul class="list-disc">
+        <ul class="list-disc dark:marker:text-white">
           <li><p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p></li>
           <li>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>

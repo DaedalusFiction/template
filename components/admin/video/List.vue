@@ -7,7 +7,7 @@
         v-if="!newDocumentPanelExpanded"
         @click="toggleExpandNewDocument"
       >
-        Create
+        <p>Create</p>
       </button>
       <div v-else class="p-2">
         <AdminVideoForm @update="handleRefreshList" />
@@ -22,8 +22,11 @@
       >
         <div
           @click="toggleExpand(video.id)"
-          class="flex p-2 justify-between rounded cursor-pointer hover:bg-backgroundAccent"
-          :class="expandedItems[video.id] && 'bg-backgroundAccent'"
+          class="flex p-2 justify-between rounded cursor-pointer hover:bg-backgroundAccent dark:hover:bg-backgroundAccentDarkMode"
+          :class="
+            expandedItems[video.id] &&
+            'bg-backgroundAccent dark:bg-backgroundAccentDarkMode'
+          "
         >
           <p>{{ video.data().title || "No Title" }}</p>
           <p>

@@ -1,32 +1,6 @@
 <template>
   <div>
-    <LayoutPageHeader header="Take Ten"
-      ><p class="mx-auto text-center px-3 dark:text-dark">
-        Take ten is a series of ten minute reminders of hope peppered with
-        encouragement for living a life worth truly living.
-      </p>
-      <br />
-      <p class="mx-auto text-center px-3 dark:text-dark">
-        based wholly on biblical truths & the promises of Jesus, take ten is
-        quite simply an arrow to point fellow life travelers to the source of
-        True peace. a dose of strength to encourage your heart Giving Hope its
-        wings to soar.
-      </p>
-      <br />
-      <p class="mx-auto text-center px-3 dark:text-dark">
-        You are warmly invited to sink into a comfy chair, grab a coffee or tea
-        and take ten minutes to turn up the quiet and turn down the chaos.
-      </p>
-      <br />
-      <p class="text-center mx-auto px-3 italic dark:text-dark">
-        “Those who hope in Me will not be disappointed.”
-      </p>
-      <p class="text-center mx-auto px-3 dark:text-dark">
-        [From your loving Heavenly Father]
-      </p>
-
-      <p class="italic text-center mx-auto px-3 dark:text-dark">Isaiah 49:23</p>
-    </LayoutPageHeader>
+    <LayoutPageHeader header="Videos">< </LayoutPageHeader>
 
     <div class="max-w-screen-lg mt-12 px-4 mx-auto md:grid grid-cols-12 gap-6">
       <div
@@ -42,7 +16,7 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         ></iframe>
-        <h3 class="link">
+        <h3 class="link text-2xl">
           <NuxtLink :to="`/videos/${video.id}`">{{
             video.data().title
           }}</NuxtLink>

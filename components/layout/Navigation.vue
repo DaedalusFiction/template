@@ -8,24 +8,17 @@
     <div class="bg-backgroundAccent dark:bg-backgroundAccentDarkMode">
       <div class="hidden xl:grid grid-cols-12 px-4 py-2 mx-auto">
         <div class="col-span-7 flex gap-4 items-center">
-          <NuxtLink to="/">
-            <div class="flex items-center gap-3">
-              <!-- <img
-                src="~/assets/images/mvdblogo-cropped.png"
-                height="50"
-                width="50"
-              /> -->
-              <h1 class="whitespace-nowrap font-sans text-2xl">
-                <span class="text-primary dark:text-primaryDarkMode"
-                  >Template</span
-                >
-                <span
-                  class="font-extrabold text-secondary dark:text-secondaryDarkMode"
-                  >Website</span
-                >
-              </h1>
-            </div>
-          </NuxtLink>
+          <h1 class="whitespace-nowrap text-2xl">
+            <NuxtLink to="/">
+              <span class="text-primary dark:text-primaryDarkMode"
+                >Template</span
+              >
+              <span
+                class="font-extrabold text-secondary dark:text-secondaryDarkMode"
+                >Website</span
+              >
+            </NuxtLink>
+          </h1>
 
           <NuxtLink
             v-for="item in pages"
@@ -36,9 +29,7 @@
           >
         </div>
         <div class="col-span-5 flex gap-3 items-center justify-end">
-          <div>
-            <InputSearchBar class="searchBar" />
-          </div>
+          <InputSearchBar class="searchBar" />
         </div>
       </div>
       <div class="p-2 mx-auto flex xl:hidden justify-between items-center">
@@ -48,16 +39,12 @@
         >
           <IconsHamburger class="navigationOptions" />
         </button>
-        <NuxtLink to="/" class="link flex gap-2 items-center">
-          <h1
-            class="whitespace-nowrap font-sans text-secondary dark:text-secondaryDarkMode"
-          >
-            Website
-          </h1></NuxtLink
-        >
+        <h1 class="text-secondary dark:text-secondaryDarkMode">
+          <NuxtLink to="/" class="link">Website</NuxtLink>
+        </h1>
         <div class="flex gap-2 items-center">
           <IconsSearch
-            class="searchBar cursor-pointer"
+            class="searchBar dark:stroke-white cursor-pointer"
             @click="handleExpandSearch"
           />
         </div>

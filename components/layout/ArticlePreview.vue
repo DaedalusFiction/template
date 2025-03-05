@@ -4,7 +4,7 @@
       <div class="image-container h-72 hover:brightness-105 transition">
         <img :src="article.data().image.src" :alt="article.data().image.alt" />
       </div>
-      <p class="text-3xl font-header font-bold pt-2">
+      <p class="text-2xl font-header link uppercase pt-2">
         {{ article.data().title }}
       </p>
       <p>by {{ article.data().author }}</p>

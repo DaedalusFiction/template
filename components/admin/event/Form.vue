@@ -9,8 +9,27 @@
       <input id="time" v-model="formData.time" required type="text" />
     </div>
     <div class="mb-4">
-      <label for="href"> Link </label>
-      <input id="href" v-model="formData.href" required type="text" />
+      <label for="location"> Location name </label>
+      <input id="location" v-model="formData.location" required type="text" />
+    </div>
+    <div class="mb-4">
+      <label for="address1"> Address line one </label>
+      <input id="address1" v-model="formData.address1" required type="text" />
+    </div>
+    <div class="mb-4">
+      <label for="address2"> Address line two </label>
+      <input id="address2" v-model="formData.address2" required type="text" />
+    </div>
+    <div class="mb-4">
+      <label for="href"> Link to external event site </label>
+      <input
+        id="href"
+        v-model="formData.href"
+        required
+        type="text"
+        placeholder="https://"
+      />
+      <p class="text-sm italic"></p>
     </div>
     <div class="mb-4">
       <label for="date"> Date </label>
@@ -23,27 +42,25 @@
       />
     </div>
     <div class="mb-4">
-      <label for="description"> Description </label>
+      <label for="description"> Description of event </label>
       <textarea id="description" v-model="formData.description" rows="4" />
     </div>
-
     <AdminImageSelector v-model:model-value="imageFile" />
-
     <div class="mb-4">
-      <label for="alt"> Image Alternate Text </label>
+      <label for="alt"> Image alternate text </label>
       <input
         id="alt"
         v-model="formData.alt"
         type="text"
-        placeholder="e.g. The Blue Ridge Mountains"
+        placeholder="Write a brief description of the image used for accessibility purposes"
       />
     </div>
     <div class="flex gap-2">
       <button class="btn" @click="submitForm">
-        {{ event ? "Update" : "Submit" }}
+        <p>{{ event ? "Update" : "Submit" }}</p>
       </button>
       <button v-if="event" class="btn" @click="handleDeleteDocument">
-        Delete
+        <p>Delete</p>
       </button>
     </div>
   </div>
@@ -60,6 +77,8 @@ const { event } = defineProps(["event"]);
 const emptyForm = {
   title: "",
   location: "",
+  address1: "",
+  address2: "",
   time: "",
   date: "",
   href: "",
@@ -69,11 +88,12 @@ const formData = ref(emptyForm);
 const imageFile = ref(null);
 
 onMounted(() => {
-  console.log(event);
   if (event) {
     formData.value = {
       title: event.data().title || "",
       location: event.data().location || "",
+      address1: event.data().address1 || "",
+      address2: event.data().address1 || "",
       time: event.data().time || "",
       href: event.data().href || "",
       date: event.data().date || "",
@@ -83,6 +103,18 @@ onMounted(() => {
 });
 
 const submitForm = async () => {
+  if (!formData.value.title) {
+    useSnackbar("Please enter a title for the event");
+    return;
+  }
+  if (!formData.value.time) {
+    useSnackbar("Please enter a time for the event");
+    return;
+  }
+  if (!formData.value.date) {
+    useSnackbar("Please enter a date for the event");
+    return;
+  }
   if (event) {
     await useUpdateDocument(
       "events",

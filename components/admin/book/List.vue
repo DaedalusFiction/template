@@ -7,7 +7,7 @@
         v-if="!newDocumentPanelExpanded"
         @click="toggleExpandNewDocument"
       >
-        Create
+        <p>Create</p>
       </button>
       <div v-else class="p-2">
         <AdminBookForm @update="handleRefreshList" />
@@ -22,8 +22,11 @@
       >
         <div
           @click="toggleExpand(book.id)"
-          class="flex p-2 justify-between rounded cursor-pointer hover:bg-backgroundAccent"
-          :class="expandedItems[book.id] && 'bg-backgroundAccent'"
+          class="flex p-2 justify-between rounded cursor-pointer hover:bg-backgroundAccent dark:hover:bg-backgroundAccentDarkMode"
+          :class="
+            expandedItems[book.id] &&
+            'bg-backgroundAccent dark:bg-backgroundAccentDarkMode'
+          "
         >
           <p>{{ book.data().title || "No Title" }}</p>
           <p>

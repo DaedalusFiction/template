@@ -60,7 +60,7 @@ label {
     @apply md:grid grid-cols-12 mx-auto mt-8 max-w-5xl gap-8;
   }
   .btn {
-    @apply py-2 px-3 w-fit text-center cursor-pointer bg-secondary dark:bg-light duration-100 text-white dark:text-dark rounded;
+    @apply py-2 px-3 w-fit font-sans text-center cursor-pointer bg-secondary dark:bg-primary duration-100 uppercase text-white rounded;
   }
   .btn-disabled {
     @apply cursor-not-allowed bg-gray-400;
@@ -85,6 +85,11 @@ label {
   }
   .btn:active {
     filter: brightness(90%);
+  }
+
+  .youtube-video {
+    aspect-ratio: 16 / 9;
+    width: 100%;
   }
 
   .image-container {

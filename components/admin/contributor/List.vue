@@ -7,7 +7,7 @@
         v-if="!newDocumentPanelExpanded"
         @click="toggleExpandNewDocument"
       >
-        Create
+        <p>Create</p>
       </button>
       <div v-else class="p-2">
         <AdminContributorForm @update="handleRefreshList" />
@@ -22,8 +22,11 @@
       >
         <div
           @click="toggleExpand(contributor.id)"
-          class="flex p-2 justify-between rounded cursor-pointer hover:bg-backgroundAccent"
-          :class="expandedItems[contributor.id] && 'bg-backgroundAccent'"
+          class="flex p-2 justify-between rounded cursor-pointer hover:bg-backgroundAccent dark:hover:bg-backgroundAccentDarkMode"
+          :class="
+            expandedItems[contributor.id] &&
+            'bg-backgroundAccent dark:bg-backgroundAccentDarkMode'
+          "
         >
           <p>{{ contributor.data().name || "No Title" }}</p>
           <p>

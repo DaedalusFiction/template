@@ -13,13 +13,28 @@
         />
         <br />
         <p class="whitespace-pre-wrap">{{ article.data().text }}</p>
+        <br />
         <p class="italic">
           Published
           {{ new Date(article.data().dateUploaded).toLocaleDateString() }}
         </p>
       </div>
       <div class="col-span-3">
-        <h2 class="md:mt-[50vh]">Further Readings</h2>
+        <h2 class="font-bold md:mt-28">Sidebar header</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+          fugiat quibusdam doloremque maxime voluptas dolorum cupiditate
+          delectus nostrum tempora voluptates!
+        </p>
+        <br />
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi,
+          quidem.
+        </p>
+        <br />
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <br />
+        <p class="btn"><NuxtLink to="/">Button</NuxtLink></p>
         <div class="flex flex-col gap-6">
           <div v-for="(furtherReading, index) in furtherReadings" :key="index">
             <LayoutArticlePreview :article="furtherReading" />

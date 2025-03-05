@@ -2,7 +2,7 @@
   <div class="max-w-screen-2xl mx-auto">
     <section>
       <div
-        class="px-3 py-8 border md:p-12 mb-16 min-h-[75vh] bg-cover bg-center flex items-end"
+        class="px-3 py-8 md:p-12 mb-16 min-h-[75vh] bg-cover bg-center flex items-end"
         :class="'bg-[linear-gradient(to_bottom,rgba(17,13,23,0),rgba(17,13,23,0)),url(~/public/images/mountains.webp)]'"
       >
         <div class="px-3">
@@ -17,8 +17,8 @@
             aspernatur quidem at?
           </p>
           <div class="pt-3 flex gap-3">
-            <button class="btn">Button One</button>
-            <button class="btn">Button Two</button>
+            <button class="btn"><p>Button One</p></button>
+            <button class="btn"><p>Button Two</p></button>
           </div>
         </div>
       </div>
@@ -53,7 +53,9 @@
       <div
         class="max-w-screen-lg mx-auto px-3 flex flex-col md:grid grid-cols-12 gap-6"
       >
-        <div class="col-span-6 bg-white border rounded-md">
+        <div
+          class="col-span-6 bg-white dark:bg-backgroundAccentDarkMode border rounded-md"
+        >
           <NuxtLink to="/contact">
             <div
               class="image-container hover:brightness-110 transition cursor-pointer h-56"
@@ -62,17 +64,19 @@
             </div>
             <div class="p-3">
               <h3 class="text-3xl mb-2">Buffet-style</h3>
-              <ul class="list-disc">
+              <ul class="list-disc dark:marker:text-light">
                 <li><p>For 10-50 people</p></li>
                 <li><p>Select a variety of proteins and sides</p></li>
                 <li><p>Build your own bowls</p></li>
                 <li><p>Minimum 24-hour notice</p></li>
               </ul>
-              <p class="btn w-full mt-2">Inquire</p>
+              <p class="btn w-full max-w-full mt-2">Inquire</p>
             </div>
           </NuxtLink>
         </div>
-        <div class="col-span-6 bg-white border rounded-md">
+        <div
+          class="col-span-6 bg-white dark:bg-backgroundAccentDarkMode border rounded-md"
+        >
           <NuxtLink to="/contact">
             <div
               class="image-container hover:brightness-110 transition cursor-pointer h-56"
@@ -81,13 +85,13 @@
             </div>
             <div class="p-3">
               <h3 class="text-3xl mb-2">Group Orders</h3>
-              <ul class="list-disc">
+              <ul class="list-disc dark:marker:text-light">
                 <li><p>For up to 15 people</p></li>
                 <li><p>Each person orders separately</p></li>
                 <li><p>One payment</p></li>
                 <li><p>Order and enjoy today!</p></li>
               </ul>
-              <p class="btn w-full mt-2">Inquire</p>
+              <p class="btn max-w-full w-full mt-2">Inquire</p>
             </div>
           </NuxtLink>
         </div>
@@ -162,46 +166,6 @@
       </p>
       <br />
       <div class="flex justify-center"><button class="btn">Button</button></div>
-    </section>
-    <section class="px-3 md:px-0">
-      <div
-        class="max-w-screen-xl mx-auto px-3 py-12 sm:p-16 md:px-16 md:py-28 md:mb-52 bg-light dark:bg-backgroundDarkMode"
-      >
-        <div
-          class="relative bg-backgroundAccent dark:bg-backgroundAccentDarkMode px-3 py-12 md:p-12"
-        >
-          <h4
-            class="accent text-3xl md:text-5xl font-extrabold absolute top-0 rotate-[-6deg] translate-y-[-25px] md:translate-y-[-30px]"
-          >
-            Header Six
-          </h4>
-          <div class="flex flex-col md:grid grid-cols-12 gap-6">
-            <div class="flex flex-col col-span-8 gap-3 justify-center">
-              <p class="md:text-xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
-                libero cum nulla, maxime nostrum magni.
-              </p>
-              <p class="btn">
-                <NuxtLink to="/about">Button</NuxtLink>
-              </p>
-              <br />
-              <p class="md:text-xl">
-                Lorem, ipsum dolor sit amet consectetur adipisicing.
-              </p>
-              <p class="btn">
-                <NuxtLink to="/contact">Button</NuxtLink>
-              </p>
-            </div>
-            <div class="col-span-4 relative">
-              <img
-                src="/public/images/mobyDick.jpg"
-                class="md:absolute md:block md:top-0 md:w-full md:border-[20px] border-white"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
   </div>
 </template>

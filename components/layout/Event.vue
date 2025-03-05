@@ -3,8 +3,12 @@
     <h4 class="text-3xl">{{ event.title }}</h4>
     <p>{{ new Date(event.date).toLocaleDateString() }}, {{ event.time }}</p>
     <p>{{ event.location }}</p>
-    <p>{{ event.description }}</p>
-    <p class="underline">
+    <p>{{ event.address1 }}</p>
+    <p>{{ event.address2 }}</p>
+    <br />
+    <p class="whitespace-pre-wrap">{{ event.description }}</p>
+    <br />
+    <p class="underline link">
       <a :href="event.href" rel="noreferrer" target="_blank"
         >More Information</a
       >

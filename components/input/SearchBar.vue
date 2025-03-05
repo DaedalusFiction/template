@@ -1,6 +1,6 @@
 <template>
   <div class="flex items-center input-wrapper">
-    <IconsSearch />
+    <IconsSearch class="stroke-black" />
     <input
       type="text"
       placeholder="Search"
