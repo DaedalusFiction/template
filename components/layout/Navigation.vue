@@ -13,8 +13,7 @@
               <span class="text-primary dark:text-primaryDarkMode"
                 >Template</span
               >
-              <span
-                class="font-extrabold text-secondary dark:text-secondaryDarkMode"
+              <span class="text-secondary dark:text-secondaryDarkMode"
                 >Website</span
               >
             </NuxtLink>

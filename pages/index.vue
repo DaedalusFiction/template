@@ -1,14 +1,13 @@
 <template>
   <div class="max-w-screen-2xl mx-auto">
-    <section>
+    <LayoutParallax />
+    <!-- <section>
       <div
-        class="px-3 py-8 md:p-12 mb-16 min-h-[75vh] bg-cover bg-center flex items-end"
+        class="px-3 py-8 md:p-12 mb-16 min-h-[75vh] bg-cover bg-center flex items-center"
         :class="'bg-[linear-gradient(to_bottom,rgba(17,13,23,0),rgba(17,13,23,0)),url(~/public/images/mountains.webp)]'"
       >
         <div class="px-3">
-          <h1 class="text-light text-5xl md:text-7xl font-bold accent">
-            Header One
-          </h1>
+          <h1 class="text-light text-5xl md:text-7xl">Header One</h1>
           <p class="text-lightMuted">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi
             consequatur ducimus eum repellendus? Eligendi porro earum vel nobis
@@ -22,11 +21,15 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- Three Image Panel -->
-    <section class="max-w-screen-lg mx-auto">
-      <div class="px-3 md:px-6">
-        <h2 class="mb-3 md:text-5xl text-darkMuted dark:text-lightMuted">
+    <section
+      class="bg-background px-3 dark:bg-backgroundDarkMode py-8 md:py-24"
+    >
+      <div class="max-w-screen-lg mx-auto">
+        <h2
+          class="mb-3 text-2xl md:text-5xl text-darkMuted dark:text-lightMuted"
+        >
           Our Menu
         </h2>
         <div class="md:grid grid-cols-12 gap-6">
@@ -102,7 +105,7 @@
         class="md:grid gap-12 grid-cols-12 max-w-screen-xl mx-auto px-3 py-16 md:py-32"
       >
         <div class="col-span-6">
-          <h3 class="text-3xl md:text-5xl font-medium">
+          <h3 class="text-3xl md:text-5xl">
             {{ textPanelOne.header }}
           </h3>
         </div>

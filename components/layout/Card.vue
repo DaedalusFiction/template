@@ -10,7 +10,7 @@
         <div class="image-container h-64 hover:brightness-105 transition">
           <img :src="card.image.src" alt="" />
         </div>
-        <p class="text-3xl font-header font-bold pt-2">
+        <p class="text-3xl font-sans pt-2">
           {{ card.header }}
         </p>
         <div>
