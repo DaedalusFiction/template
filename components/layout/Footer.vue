@@ -9,14 +9,9 @@
         <h6 class="text-lg mb-2 text-primary dark:text-primaryDarkMode">
           Pages
         </h6>
-
-        <div class="mb-1" v-for="(page, index) in pages" :key="page.title">
-          <NuxtLink
-            :to="page.href"
-            class="hover:text-primary dark:hover:text-primaryDarkMode"
-            ><p>{{ page.title }}</p></NuxtLink
-          >
-        </div>
+        <p class="mb-1" v-for="(page, index) in pages" :key="page.title">
+          <NuxtLink :to="page.href" class="link">{{ page.title }}</NuxtLink>
+        </p>
       </div>
       <div class="col-span-3">
         <h6 class="text-lg mb-2 text-primary dark:text-primaryDarkMode">
@@ -27,9 +22,7 @@
           v-for="(link, index) in socialMediaLinks"
           :key="link.title"
         >
-          <NuxtLink :to="link.href" class="hover:text-primary">{{
-            link.title
-          }}</NuxtLink>
+          <NuxtLink :to="link.href" class="link">{{ link.title }}</NuxtLink>
         </p>
       </div>
       <div class="col-span-3"></div>

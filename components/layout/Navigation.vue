@@ -43,7 +43,7 @@
         </h1>
         <div class="flex gap-2 items-center">
           <IconsSearch
-            class="searchBar dark:stroke-white cursor-pointer"
+            class="searchBar stroke-black dark:stroke-white cursor-pointer"
             @click="handleExpandSearch"
           />
         </div>

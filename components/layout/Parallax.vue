@@ -1,6 +1,6 @@
 <!-- components/ParallaxHero.vue -->
 <template>
-  <section class="relative py-8 min-h-[75vh] flex items-center">
+  <section class="relative py-8 min-h-[75vh] flex items-end">
     <div
       class="h-full w-full absolute z-0 bg-cover bg-center"
       :style="{
@@ -9,7 +9,7 @@
       }"
       :class="'bg-[linear-gradient(to_bottom,rgba(17,13,23,0),rgba(17,13,23,0)),url(~/public/images/mountains.webp)]'"
     />
-    <div class="px-3 z-1 relative">
+    <div class="px-3 z-1 relative w-full max-w-screen-xl mx-auto py-8">
       <h1 class="text-light text-5xl md:text-7xl">Header One</h1>
       <p class="text-lightMuted">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi
@@ -28,9 +28,6 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-
-// Reference for the background element
-const parallaxBackground = ref(null);
 
 // State to track background Y offset
 const backgroundYOffset = ref(0);

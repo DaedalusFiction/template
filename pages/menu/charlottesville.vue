@@ -2,13 +2,13 @@
   <div>
     <LayoutPageHeader header="Charlottesville" />
     <div class="max-w-screen-xl mx-auto px-3">
-      <h2 class="text-2xl max-w-full text-center uppercase">How it works</h2>
+      <h2 class="text-2xl md:text-5xl max-w-full text-center uppercase">
+        How it works
+      </h2>
       <br />
       <div class="flex flex-col md:grid grid-cols-12 gap-6 p-3">
         <div class="col-span-6">
-          <p
-            class="max-w-full font-header md:text-right font-bold text-3xl uppercase"
-          >
+          <p class="max-w-full md:text-right font-bold text-3xl uppercase">
             Step 1: Choose Your Protein
           </p>
         </div>
@@ -27,14 +27,16 @@
       <br />
       <div class="flex flex-col md:grid grid-cols-12 gap-6 p-3">
         <div class="col-span-6">
-          <p
-            class="max-w-full font-header md:text-right font-bold text-3xl uppercase"
-          >
+          <p class="max-w-full md:text-right font-bold text-3xl uppercase">
             Step 2: Choose Your Rice
           </p>
         </div>
         <div class="col-span-6">
-          <p v-for="(rice, index) in rices" :key="index">
+          <p
+            class="font-bold text-xl"
+            v-for="(rice, index) in rices"
+            :key="index"
+          >
             {{ rice.name }}<span v-if="rice.isVegan"> (V)</span
             ><span class="align-super text-xs" v-if="rice.isRaw">&sect;</span>
           </p>
@@ -43,17 +45,18 @@
       <br />
       <div class="flex flex-col md:grid grid-cols-12 gap-6 p-3">
         <div class="col-span-6">
-          <p
-            class="max-w-full font-header md:text-right font-bold text-3xl uppercase"
-          >
+          <p class="max-w-full md:text-right font-bold text-3xl uppercase">
             Step 3: Add Sides
           </p>
         </div>
         <div class="col-span-6">
-          <p v-for="(side, index) in sides" :key="index">
-            {{ side.name }}<span v-if="side.isVegan"> (V)</span
-            ><span class="align-super text-xs" v-if="side.isRaw">&sect;</span>
-          </p>
+          <div v-for="(side, index) in sides" :key="index">
+            <p class="font-bold text-xl">
+              {{ side.name }}<span v-if="side.isVegan"> (V)</span
+              ><span class="align-super text-xs" v-if="side.isRaw">&sect;</span>
+            </p>
+            <p class="ml-3">{{ side.description }}</p>
+          </div>
         </div>
       </div>
       <br />
@@ -64,10 +67,15 @@
           </p>
         </div>
         <div class="col-span-6">
-          <p v-for="(addOn, index) in addons" :key="index">
-            {{ addOn.name }}<span v-if="addOn.isVegan"> (V)</span
-            ><span class="align-super text-xs" v-if="addOn.isRaw">&sect;</span>
-          </p>
+          <div v-for="(addOn, index) in addons" :key="index">
+            <p class="font-bold text-xl">
+              {{ addOn.name }}<span v-if="addOn.isVegan"> (V)</span
+              ><span class="align-super text-xs" v-if="addOn.isRaw"
+                >&sect;</span
+              >
+            </p>
+            <p class="ml-3">{{ addOn.description }}</p>
+          </div>
         </div>
       </div>
       <br />
@@ -76,41 +84,69 @@
         <NuxtLink to="/">Order Now</NuxtLink>
       </p>
       <br />
-      <h3 class="text-2xl max-w-full text-center uppercase">Poke bowls</h3>
-      <br />
-      <div class="flex flex-col md:grid grid-cols-9 lg:grid-cols-12 gap-3">
-        <div
-          class="col-span-3"
-          v-for="(pokeBowl, index) in pokeBowls"
-          :key="index"
-        >
-          <LayoutCard :card="pokeBowl" />
+      <section>
+        <h3 class="text-2xl md:text-5xl max-w-full text-center uppercase">
+          Poke bowls
+        </h3>
+        <p class="max-w-full text-center italic">"POE-kay" -- Ahi Tuna (RAW)</p>
+        <br />
+        <div class="flex flex-col md:grid grid-cols-9 lg:grid-cols-12 gap-3">
+          <div
+            class="col-span-3"
+            v-for="(pokeBowl, index) in pokeBowls"
+            :key="index"
+          >
+            <LayoutCard :card="pokeBowl" />
+          </div>
         </div>
-      </div>
+      </section>
       <br />
-      <h3 class="text-2xl max-w-full text-center uppercase">Kids' Meals</h3>
-      <br />
-      <div class="flex flex-col md:grid grid-cols-9 lg:grid-cols-12 gap-3">
-        <div
-          class="col-span-3"
-          v-for="(kidsMeal, index) in kidsMeals"
-          :key="index"
-        >
-          <LayoutCard :card="kidsMeal" />
+      <section>
+        <h3 class="text-2xl md:text-5xl max-w-full text-center uppercase">
+          Kids' Meals
+        </h3>
+        <p class="max-w-full text-center italic">
+          Served with white rice and one vegetable side
+        </p>
+        <br />
+        <div class="flex flex-col md:grid grid-cols-9 lg:grid-cols-12 gap-3">
+          <div
+            class="col-span-3"
+            v-for="(kidsMeal, index) in kidsMeals"
+            :key="index"
+          >
+            <LayoutCard :card="kidsMeal" />
+          </div>
         </div>
-      </div>
+      </section>
       <br />
-      <h3 class="text-2xl max-w-full text-center uppercase">Desserts</h3>
-      <br />
-      <div class="flex flex-col md:grid grid-cols-9 lg:grid-cols-12 gap-3">
-        <div
-          class="col-span-3"
-          v-for="(dessert, index) in desserts"
-          :key="index"
-        >
-          <LayoutCard :card="dessert" />
+      <section>
+        <h3 class="text-2xl md:text-5xl max-w-full text-center uppercase">
+          Desserts
+        </h3>
+        <br />
+        <div class="flex flex-col md:grid grid-cols-9 lg:grid-cols-12 gap-3">
+          <div
+            class="col-span-3"
+            v-for="(dessert, index) in desserts"
+            :key="index"
+          >
+            <LayoutCard :card="dessert" />
+          </div>
         </div>
-      </div>
+      </section>
+      <br />
+      <section>
+        <h3 class="text-2xl md:text-5xl max-w-full text-center uppercase">
+          Extras
+        </h3>
+        <br />
+        <div class="flex flex-col md:grid grid-cols-9 lg:grid-cols-12 gap-3">
+          <div class="col-span-3" v-for="(extra, index) in extras" :key="index">
+            <LayoutCard :card="extra" />
+          </div>
+        </div>
+      </section>
     </div>
     <div class="flex justify-center">
       <div class="max-w-[35ch]">
@@ -127,10 +163,10 @@
 </template>
 
 <script setup>
-import { menuPreview } from "~/content/home";
 import {
   addons,
   desserts,
+  extras,
   kidsMeals,
   pokeBowls,
   proteins,

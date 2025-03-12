@@ -1,42 +1,26 @@
 <template>
   <div class="max-w-screen-2xl mx-auto">
     <LayoutParallax />
-    <!-- <section>
-      <div
-        class="px-3 py-8 md:p-12 mb-16 min-h-[75vh] bg-cover bg-center flex items-center"
-        :class="'bg-[linear-gradient(to_bottom,rgba(17,13,23,0),rgba(17,13,23,0)),url(~/public/images/mountains.webp)]'"
-      >
-        <div class="px-3">
-          <h1 class="text-light text-5xl md:text-7xl">Header One</h1>
-          <p class="text-lightMuted">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi
-            consequatur ducimus eum repellendus? Eligendi porro earum vel nobis
-            aliquam qui quas autem expedita eum adipisci quis culpa repudiandae
-            mollitia, sed eveniet ad sint sapiente cumque velit! Laborum
-            aspernatur quidem at?
-          </p>
-          <div class="pt-3 flex gap-3">
-            <button class="btn"><p>Button One</p></button>
-            <button class="btn"><p>Button Two</p></button>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    <!-- Three Image Panel -->
+
     <section
       class="bg-background px-3 dark:bg-backgroundDarkMode py-8 md:py-24"
     >
-      <div class="max-w-screen-lg mx-auto">
+      <div class="max-w-screen-xl mx-auto">
         <h2
           class="mb-3 text-2xl md:text-5xl text-darkMuted dark:text-lightMuted"
         >
-          Our Menu
+          Header Two
         </h2>
         <div class="md:grid grid-cols-12 gap-6">
           <div
             v-for="(card, index) in menuPreview"
             :key="index"
-            class="col-span-4"
+            v-scroll-animation="{
+              duration: 1.2,
+              delay: 0.1 * (index + 1),
+              translateY: 25,
+            }"
+            class="col-span-3"
           >
             <LayoutCard :card="card" />
           </div>
@@ -45,14 +29,23 @@
         <div class="flex justify-end">
           <p>
             <NuxtLink class="link" to="/menu"
-              >Explore Full Menu <span class="text-2xl">&rarr;</span></NuxtLink
+              >Explore <span class="text-2xl">&rarr;</span></NuxtLink
             >
           </p>
         </div>
       </div>
     </section>
     <section class="pt-12">
-      <h3 class="text-3xl md:text-5xl mb-6 text-center">Catering</h3>
+      <h3
+        v-scroll-animation="{
+          duration: 1.2,
+          delay: 0.2,
+          translateX: 50,
+        }"
+        class="text-3xl md:text-5xl mb-6 text-center"
+      >
+        Catering
+      </h3>
       <div
         class="max-w-screen-lg mx-auto px-3 flex flex-col md:grid grid-cols-12 gap-6"
       >
@@ -63,7 +56,7 @@
             <div
               class="image-container hover:brightness-110 transition cursor-pointer h-56"
             >
-              <img src="/public/images/poke7.webp" alt="" />
+              <img src="/public/images/mountains5.webp" alt="" />
             </div>
             <div class="p-3">
               <h3 class="text-3xl mb-2">Buffet-style</h3>
@@ -84,7 +77,7 @@
             <div
               class="image-container hover:brightness-110 transition cursor-pointer h-56"
             >
-              <img src="/public/images/poke6.webp" alt="" />
+              <img src="/public/images/mountains7.webp" alt="" />
             </div>
             <div class="p-3">
               <h3 class="text-3xl mb-2">Group Orders</h3>
@@ -105,13 +98,13 @@
         class="md:grid gap-12 grid-cols-12 max-w-screen-xl mx-auto px-3 py-16 md:py-32"
       >
         <div class="col-span-6">
-          <h3 class="text-3xl md:text-5xl">
-            {{ textPanelOne.header }}
-          </h3>
+          <h3 class="text-3xl md:text-5xl">Header Three</h3>
         </div>
         <div class="col-span-6">
           <p class="md:text-2xl md:pt-16">
-            {{ textPanelOne.text }}
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+            quas neque cupiditate tempora in explicabo earum quidem quo. Facere,
+            aut?
           </p>
           <br />
           <button class="btn">Button</button>
@@ -121,13 +114,16 @@
     <section>
       <div class="md:grid grid-cols-12 md:px-6 my-8">
         <div class="col-span-7 image-container h-72 md:h-full">
-          <img :src="largePanelOne.image.src" :alt="largePanelOne.image.alt" />
+          <img src="/public/images/mountains2.webp" alt="alt text" />
         </div>
         <div
           class="col-span-5 bg-backgroundAccent dark:bg-secondary px-3 py-6 md:p-12 flex flex-col gap-6 md:gap-12 justify-between"
         >
-          <h4>{{ largePanelOne.header }}</h4>
-          <p class="md:text-5xl">{{ largePanelOne.text }}</p>
+          <h4>Header Four</h4>
+          <p class="md:text-5xl">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore,
+            labore! Consequatur incidunt quia eveniet totam?
+          </p>
           <NuxtLink to="/"><button class="btn">Button</button></NuxtLink>
         </div>
       </div>
@@ -137,28 +133,31 @@
         <div
           class="col-span-5 bg-backgroundAccent dark:bg-secondary px-3 py-6 md:p-12 flex flex-col gap-6 md:gap-12 justify-between"
         >
-          <h5>{{ largePanelTwo.header }}</h5>
-          <p class="md:text-5xl">{{ largePanelTwo.text }}</p>
+          <h5>Header Five</h5>
+          <p class="md:text-5xl">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt
+            neque nemo ipsum?
+          </p>
           <NuxtLink to="/"><button class="btn">Button</button></NuxtLink>
         </div>
         <div class="col-span-7 image-container h-72 md:h-full">
-          <img :src="largePanelTwo.image.src" :alt="largePanelTwo.image.alt" />
+          <img src="/public/images/mountains3.webp" alt="alt text" />
         </div>
       </div>
     </section>
     <section>
       <div class="md:grid grid-cols-12 md:px-6 my-8">
         <div class="col-span-7 image-container h-72 md:h-full">
-          <img
-            :src="largePanelThree.image.src"
-            :alt="largePanelThree.image.alt"
-          />
+          <img src="/public/images/mountains4.webp" alt="alt text" />
         </div>
         <div
           class="col-span-5 bg-backgroundAccent dark:bg-secondary px-3 py-6 md:p-12 flex flex-col gap-6 md:gap-12 justify-between"
         >
-          <h6>{{ largePanelThree.header }}</h6>
-          <p class="md:text-5xl">{{ largePanelThree.text }}</p>
+          <h6>Header Six</h6>
+          <p class="md:text-5xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+            mollitia minima sed!
+          </p>
           <NuxtLink to="/"><button class="btn">Button</button></NuxtLink>
         </div>
       </div>
@@ -174,24 +173,7 @@
 </template>
 
 <script setup>
-import {
-  collection,
-  doc,
-  getDoc,
-  getDocs,
-  limit,
-  orderBy,
-  query,
-  where,
-} from "firebase/firestore";
-import {
-  largePanelOne,
-  largePanelThree,
-  largePanelTwo,
-  menuPreview,
-  textPanelOne,
-  threeCardPanel,
-} from "~/content/home";
+import { menuPreview } from "~/content/menu";
 </script>
 
 <style scoped></style>

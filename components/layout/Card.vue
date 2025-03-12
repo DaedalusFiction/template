@@ -15,7 +15,7 @@
         </p>
         <div>
           <p class="text-darkMuted dark:text-lightMuted">
-            {{ card.text }}
+            {{ card.description }}
           </p>
         </div>
       </div>
