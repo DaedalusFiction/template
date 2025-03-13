@@ -4,7 +4,7 @@ module.exports = {
     fontFamily: {
       // Restaurant
       // header: ["Jost", "sans-serif"],
-      sans: ["Montserrat", "sans-serif"],
+      sans: ["Inter", "sans-serif"],
 
       // Modern
       header: ["Montserrat", "sans-serif"],

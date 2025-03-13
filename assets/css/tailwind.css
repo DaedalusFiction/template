@@ -25,7 +25,7 @@ h6 {
 }
 
 p {
-  @apply max-w-prose font-serif dark:text-light;
+  @apply max-w-prose font-sans text-lg font-light text-dark dark:text-light;
 }
 
 li {

@@ -119,8 +119,8 @@
         <div
           class="col-span-5 bg-backgroundAccent dark:bg-secondary px-3 py-6 md:p-12 flex flex-col gap-6 md:gap-12 justify-between"
         >
-          <h4>Header Four</h4>
-          <p class="md:text-5xl">
+          <h4 class="font-bold">Header Four</h4>
+          <p class="md:text-4xl">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore,
             labore! Consequatur incidunt quia eveniet totam?
           </p>
@@ -133,8 +133,8 @@
         <div
           class="col-span-5 bg-backgroundAccent dark:bg-secondary px-3 py-6 md:p-12 flex flex-col gap-6 md:gap-12 justify-between"
         >
-          <h5>Header Five</h5>
-          <p class="md:text-5xl">
+          <h5 class="font-bold">Header Five</h5>
+          <p class="md:text-4xl">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt
             neque nemo ipsum?
           </p>
@@ -153,8 +153,8 @@
         <div
           class="col-span-5 bg-backgroundAccent dark:bg-secondary px-3 py-6 md:p-12 flex flex-col gap-6 md:gap-12 justify-between"
         >
-          <h6>Header Six</h6>
-          <p class="md:text-5xl">
+          <h6 class="font-bold">Header Six</h6>
+          <p class="md:text-4xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
             mollitia minima sed!
           </p>
