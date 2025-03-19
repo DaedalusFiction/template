@@ -2,11 +2,7 @@
   <div class="py-24 md:py-32 max-w-screen-xl px-3 mx-auto">
     <div v-if="video" class="flex flex-col md:grid grid-cols-12 gap-12">
       <div class="col-span-8">
-        <h1
-          class="text-3xl md:text-7xl mt-12 text-primary uppercase font-sans mb-6"
-        >
-          {{ video.data().title }}
-        </h1>
+        <h1 class="md:text-4xl mb-3">{{ video.data().title }}</h1>
         <iframe
           class="youtube-video mb-3 rounded-xl"
           :src="video.data().url"
@@ -25,10 +21,8 @@
         </p>
       </div>
       <div class="col-span-4 md:pt-24">
-        <p class="accent text-2xl font-bold md:text-5xl text-primary">
-          Lisa W Talks
-        </p>
-        <br />
+        <h2 class="font-bold md:mt-28 mb-3">Sidebar header</h2>
+
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo ducimus
           incidunt deleniti!
@@ -44,7 +38,6 @@
           ><p class="underline link">Learn More</p></NuxtLink
         >
 
-        <h2 class="mt-12 mb-6">Further Thoughts</h2>
         <div class="flex flex-col gap-6">
           <div v-for="(furtherReading, index) in furtherReadings" :key="index">
             <iframe

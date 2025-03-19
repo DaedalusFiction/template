@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="p-3 mt-8 bg-backgroundAccent dark:bg-backgroundAccentDarkMode border-t"
+    class="p-3 mt-12 bg-backgroundAccent dark:bg-backgroundAccentDarkMode border-t"
   >
     <div
       class="flex flex-col max-w-screen-2xl mx-auto py-8 gap-4 md:grid grid-cols-12"

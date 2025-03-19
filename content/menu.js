@@ -1,59 +1,31 @@
 const proteins = [
   {
-    name: "Chicken Katsu",
+    name: "Protein One",
     allergens: [""],
     isRaw: false,
     isVegan: false,
-    description:
-      "Chicken breast medallions breaded in panko and deep fried. Served with katsu sauce, which is a Japanese BBQ sauce.",
+    description: "Description of item",
   },
   {
-    name: "Mochiko Chicken",
-    allergens: [""],
-    isRaw: false,
-    isVegan: false,
-    description:
-      "Nuggets of dark meat chicken marinated in garlic, ginger, soy*, and mochiko (rice) flour, then deep fried. Served with Mochiko sauce, which is similar to yum yum sauce.",
-  },
-  {
-    name: "Hawaiian BBQ Chicken",
-    allergens: [""],
-    isRaw: false,
-    isVegan: false,
-    description:
-      "Charbroiled chicken thighs marinated in our homemade teriyaki BBQ sauce (G/F). Served with extra teriyaki BBQ sauce on the side.",
-  },
-  {
-    name: "Teriyaki Beef",
-    allergens: [""],
-    isRaw: false,
-    isVegan: false,
-    description:
-      "Grilled tender thinly-sliced beef marinated in our tangy teriyaki* BBQ sauce. Served with extra teriyaki BBQ sauce on the side.",
-  },
-  {
-    name: "Tempura Shrimp",
-    allergens: [""],
-    isRaw: false,
-    isVegan: false,
-    description:
-      "Panko-crusted, deep-fried shrimp. Served with tempura dipping sauce.",
-  },
-  {
-    name: "Asian Kale Quinoa Patties",
-    allergens: [""],
-    isRaw: false,
-    isVegan: false,
-    description:
-      "Grilled quinoa cakes with kale, scallions, and a touch of sesame oil. Served with Mochiko sauce.",
-  },
-  {
-    name: "Teriyaki Tofu",
+    name: "Protein Two",
     allergens: [""],
     isRaw: false,
     isVegan: true,
-    description:
-      "Extra-firm tofu, grilled and glazed with our homemade teriyaki* sauce. Served with extra sauce on the side.",
+    description: "Description of item",
+  },
+  {
+    name: "Protein Three",
+    allergens: [""],
+    isRaw: true,
+    isVegan: false,
+    description: "Description of item",
+  },
+  {
+    name: "Protein Four",
+    allergens: [""],
+    isRaw: true,
+    isVegan: true,
+    description: "Description of item",
   },
 ];
 
@@ -65,108 +37,73 @@ const rices = [
 
 const sides = [
   {
-    name: "Hawaiian Macaroni Salad",
+    name: "Side One",
     allergens: [""],
     isRaw: false,
     isVegan: false,
-    description:
-      "Cold macaroni salad with shredded carrots, in a creamy mayo dressing",
+    description: "Description of item",
   },
   {
-    name: "Sesame Green Beans",
-    allergens: [""],
-    isRaw: false,
-    isVegan: true,
-    description: "Blanched green beans tossed in soy, mirin, and sesame",
-  },
-  {
-    name: "Spicy Garlic Green Beans",
+    name: "Side Two",
     allergens: [""],
     isRaw: false,
     isVegan: false,
-    description:
-      "Blanched green beans tossed with our homemade spicy garlic sauce",
+    description: "Description of item",
   },
   {
-    name: "Soba Noodle Salad",
-    allergens: [""],
-    isRaw: false,
-    isVegan: true,
-    description:
-      "Soba (buckwheat) noodles tossed in our house yuzu citrus vinaigrette",
-  },
-  {
-    name: "Asian Slaw",
+    name: "Side Three",
     allergens: [""],
     isRaw: false,
     isVegan: false,
-    description:
-      "Shredded cabbage, carrots, kale, tossed in our house creamy sesame dressing",
+    description: "Description of item",
   },
   {
-    name: "Cucumber Kimchi",
+    name: "Side Four",
     allergens: [""],
     isRaw: false,
     isVegan: false,
-    description:
-      "Fresh cucumbers marinated in a spicy and tangy kimchee sauce (contains anchovy)",
+    description: "Description of item",
   },
   {
-    name: "Watercress & Sesame Salad",
+    name: "Side Five",
     allergens: [""],
     isRaw: false,
     isVegan: false,
-    description:
-      "Blanched watercress seasoned with sesame oil and toasted sesame seeds",
-  },
-  {
-    name: "Edamame (shelled)",
-    allergens: [""],
-    isRaw: false,
-    isVegan: true,
-    description: "",
-  },
-  {
-    name: "Just Corn",
-    allergens: [""],
-    isRaw: false,
-    isVegan: true,
-    description: "",
+    description: "Description of item",
   },
 ];
 
 const addons = [
   {
-    name: "Tempura Shrimp",
+    name: "Add-on One",
     allergens: [""],
     isRaw: false,
     isVegan: false,
-    description:
-      "Panko-crusted deep fried shrimp. Served with tempura dipping sauce",
+    description: "Description of item",
   },
   {
-    name: "Ahi Tuna Poke",
-    allergens: [""],
-    isRaw: true,
-    isVegan: false,
-    description: "Sushi-grade tuna marinated in soy, sesame oil, and scallions",
-  },
-  {
-    name: "Japanese Curry Sauce",
+    name: "Add-on Two",
     allergens: [""],
     isRaw: false,
     isVegan: false,
-    description: "",
+    description: "Description of item",
   },
   {
-    name: "Furikake Rice Seasoning",
+    name: "Add-on Three",
     allergens: [""],
     isRaw: false,
     isVegan: false,
     description: "",
   },
   {
-    name: "Extra Sauces",
+    name: "Add-on Four",
+    allergens: [""],
+    isRaw: false,
+    isVegan: false,
+    description: "",
+  },
+  {
+    name: "Add-on Five",
     allergens: [""],
     isRaw: false,
     isVegan: false,

@@ -86,9 +86,9 @@
       <br />
       <section>
         <h3 class="text-2xl md:text-5xl max-w-full text-center uppercase">
-          Poke bowls
+          Bowls
         </h3>
-        <p class="max-w-full text-center italic">"POE-kay" -- Ahi Tuna (RAW)</p>
+        <p class="max-w-full text-center italic">Served with choice of rice</p>
         <br />
         <div class="flex flex-col md:grid grid-cols-9 lg:grid-cols-12 gap-3">
           <div
@@ -163,7 +163,6 @@
 </template>
 
 <script setup>
-import { menuPreview } from "~/content/home";
 import {
   addons,
   desserts,
