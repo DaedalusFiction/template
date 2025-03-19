@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-screen-2xl mx-auto">
-    <LayoutParallax />
+    <!-- <LayoutParallax /> -->
 
     <section
       class="bg-background px-3 dark:bg-backgroundDarkMode py-8 md:py-24"

@@ -8,4 +8,4 @@ Disallow: /admin
 Crawl-delay: 10
 
 # Add your sitemap location
-# Sitemap: https://metroidvania.com/sitemap.xml
+# Sitemap: https://fictionaltemplate.com/sitemap.xml
