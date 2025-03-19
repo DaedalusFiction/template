@@ -73,7 +73,7 @@ label {
   }
 
   .accent {
-    font-family: Inter;
+    font-family: Genos;
   }
 
   .link {
@@ -123,13 +123,10 @@ label {
   font-family: Mulish;
   src: url("~/assets/fonts/Mulish.woff2") format("woff2");
 }
+
 @font-face {
-  font-family: Ysabeau;
-  src: url("~/assets/fonts/Ysabeau.woff2") format("woff2");
-}
-@font-face {
-  font-family: Gistesy;
-  src: url("~/assets/fonts/Gistesy.woff2") format("woff2");
+  font-family: Genos;
+  src: url("~/assets/fonts/Genos.woff2") format("woff2");
 }
 @font-face {
   font-family: Roxborough;

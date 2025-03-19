@@ -19,8 +19,8 @@
         quidem at?
       </p>
       <div class="pt-3 flex gap-3">
-        <button class="btn"><p>Button One</p></button>
-        <button class="btn"><p>Button Two</p></button>
+        <button class="btn">Button</button>
+        <button class="btn">Button</button>
       </div>
     </div>
   </section>

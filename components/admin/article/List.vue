@@ -8,7 +8,7 @@
         v-if="!newDocumentPanelExpanded"
         @click="toggleExpandNewDocument"
       >
-        <p>Create</p>
+        Create
       </button>
       <div v-else class="p-2">
         <AdminArticleForm @update="handleRefreshList" />

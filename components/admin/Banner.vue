@@ -6,7 +6,7 @@
     </div>
 
     <div class="flex gap-2">
-      <button class="btn" @click="submitForm"><p>Set</p></button>
+      <button class="btn" @click="submitForm">Set</button>
       <button v-if="video" class="btn" @click="handleDeleteDocument">
         Clear
       </button>

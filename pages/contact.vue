@@ -5,7 +5,7 @@
       class="flex flex-col md:grid grid-cols-12 px-3 gap-6 mx-auto max-w-screen-2xl"
     >
       <div class="col-span-6">
-        <p class="md:text-5xl mb-3 md:mb-12">
+        <p class="md:text-3xl mb-3 md:mb-12">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta,
           harum. Id, asperiores.
         </p>
