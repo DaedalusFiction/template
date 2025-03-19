@@ -3,7 +3,7 @@
     <div v-if="article" class="flex flex-col md:grid grid-cols-12 gap-12">
       <div class="col-span-9">
         <h1 class="md:text-5xl mb-6">{{ article.data().title }}</h1>
-        <p>by {{ article.data().author }}</p>
+        <p class="italic">by {{ article.data().author }}</p>
         <br />
         <img
           v-if="article.data().image"
