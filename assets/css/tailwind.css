@@ -4,11 +4,19 @@
 
 * {
   scroll-behavior: smooth;
-  @apply border-border dark:border-borderDarkMode relative;
+  @apply border-border dark:border-borderDarkMode relative transition-colors;
 }
 
 :root {
-  --color: #c1c1c1;
+  --color-primary: #0f7173;
+  --color-primary-dark-mode: #f1c40f;
+  --color-secondary: #df3b57;
+  --color-secondary-dark-mode: #f2542d;
+  --color-background: #f7f0f0;
+  --color-background-accent: #e3dbdc;
+
+  --font-header: Montserrat;
+  --font-sans: SourceSans;
 }
 
 body {
@@ -21,15 +29,15 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-header text-xl dark:text-light uppercase;
+  @apply font-header text-xl font-light dark:text-light uppercase;
 }
 
 p {
-  @apply max-w-prose font-sans text-lg font-light text-dark dark:text-light;
+  @apply font-sans text-lg font-light text-dark dark:text-light;
 }
 
 li {
-  @apply max-w-prose font-sans ml-5;
+  @apply font-sans ml-5;
 }
 
 hr {
@@ -110,37 +118,43 @@ label {
     min-height: 100%;
   }
 }
+/* pairings */
+@font-face {
+  font-family: Karla;
+  src: url("~/assets/fonts/Karla.woff2") format("woff2");
+}
+@font-face {
+  font-family: Inconsolata;
+  src: url("~/assets/fonts/Inconsolata.woff2") format("woff2");
+}
 
+@font-face {
+  font-family: Oswald;
+  src: url("~/assets/fonts/Oswald.woff2") format("woff2");
+}
+@font-face {
+  font-family: Quicksand;
+  src: url("~/assets/fonts/Quicksand.woff2") format("woff2");
+}
+@font-face {
+  font-family: Lora;
+  src: url("~/assets/fonts/Lora.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Syne;
+  src: url("~/assets/fonts/Syne.woff2") format("woff2");
+}
 @font-face {
   font-family: Inter;
   src: url("~/assets/fonts/Inter.woff2") format("woff2");
 }
-@font-face {
-  font-family: EBGaramond;
-  src: url("~/assets/fonts/EBGaramond.woff2") format("woff2");
-}
-@font-face {
-  font-family: Mulish;
-  src: url("~/assets/fonts/Mulish.woff2") format("woff2");
-}
 
-@font-face {
-  font-family: Genos;
-  src: url("~/assets/fonts/Genos.woff2") format("woff2");
-}
-@font-face {
-  font-family: Roxborough;
-  src: url("~/assets/fonts/Roxborough.woff2") format("woff2");
-}
 @font-face {
   font-family: Montserrat;
   src: url("~/assets/fonts/Montserrat.woff2") format("woff2");
 }
 @font-face {
-  font-family: Jost;
-  src: url("~/assets/fonts/Jost.woff2") format("woff2");
-}
-@font-face {
-  font-family: Varta;
-  src: url("~/assets/fonts/Varta.woff2") format("woff2");
+  font-family: SourceSans;
+  src: url("~/assets/fonts/SourceSans.woff2") format("woff2");
 }

@@ -4,31 +4,31 @@ module.exports = {
     fontFamily: {
       // Restaurant
       // header: ["Jost", "sans-serif"],
-      sans: ["Inter", "sans-serif"],
+      sans: ["var(--font-sans)", "sans-serif"],
 
       // Modern
-      header: ["Montserrat", "sans-serif"],
+      header: ["var(--font-header)", "sans-serif"],
       // sans: ["Varta", "sans-serif"],
 
       // Fancy
       // header: ["Gistesy", "sans-serif"],
       // sans: ["Roxborough", "sans-serif"],
 
-      serif: ["EBGaramond", "serif"],
+      serif: ["Quicksand", "serif"],
     },
     extend: {
       colors: {
-        primary: "#0F7173",
-        primaryDarkMode: "#F1C40F",
-        secondary: "#DF3B57",
-        secondaryDarkMode: "#F2542D",
+        primary: "var(--color-primary)",
+        primaryDarkMode: "var(--color-primary-dark-mode)",
+        secondary: "var(--color-secondary)",
+        secondaryDarkMode: "var(--color-secondary-dark-mode)",
         light: "#f7f4f0",
         lightMuted: "#f7f4f0",
         dark: "#2c2c2c",
         darkMuted: "#373737",
-        background: "#F7F0F0",
+        background: "var(--color-background)",
         backgroundDarkMode: "#110d17",
-        backgroundAccent: "#E3DBDC",
+        backgroundAccent: "var(--color-background-accent)",
         backgroundAccentDarkMode: "#343633",
         backgroundHover: "#424242",
         border: "#c1c1c1",

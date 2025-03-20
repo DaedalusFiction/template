@@ -1,17 +1,17 @@
 <!-- components/ParallaxHero.vue -->
 <template>
-  <section class="relative py-8 min-h-[75vh] flex items-end">
+  <section class="relative pt-8 min-h-[75vh] flex items-end">
     <div
       class="h-full w-full absolute z-0 bg-cover bg-center"
       :style="{
         transform: `translateY(${backgroundYOffset}px)`,
         willChange: 'transform',
       }"
-      :class="'bg-[linear-gradient(to_bottom,rgba(17,13,23,0),rgba(17,13,23,0)),url(~/public/images/mountains.webp)]'"
+      :class="'bg-[linear-gradient(to_bottom,rgba(17,13,23,0),rgba(17,13,23,0)),url(~/public/images/mountains1.webp)]'"
     />
     <div class="px-3 z-1 relative w-full max-w-screen-xl mx-auto py-8">
-      <h1 class="text-light text-5xl md:text-7xl">Header One</h1>
-      <p class="text-lightMuted">
+      <h1 class="text-light text-5xl md:text-7xl mb-2">Header One</h1>
+      <p class="text-lightMuted max-w-prose">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi
         consequatur ducimus eum repellendus? Eligendi porro earum vel nobis
         aliquam qui quas autem expedita eum adipisci quis culpa repudiandae

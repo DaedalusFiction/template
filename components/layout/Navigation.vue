@@ -24,7 +24,7 @@
             :key="item"
             class="link"
             :href="item.href"
-            ><p>{{ item.title }}</p></NuxtLink
+            >{{ item.title }}</NuxtLink
           >
         </div>
         <div class="col-span-5 flex gap-3 items-center justify-end">
