@@ -297,25 +297,25 @@ const paletteOptions = [
     backgroundAccent: "#e3dbdc",
   },
   {
-    name: "Lodge",
-    primary: "#004643",
-    secondary: "#AB3428",
-    backgroundAccent: "#FAF4D3",
-    background: "#FFFBFC",
-  },
-  {
-    name: "Shoppe",
-    primary: "#45062E",
-    secondary: "#FF686B",
-    background: "#FFFFFF",
-    backgroundAccent: "#FFEEF2",
-  },
-  {
     name: "Alpinist",
     primary: "#6F6866",
     secondary: "#38302E",
     background: "#CCDAD1",
     backgroundAccent: "#9CAEA9",
+  },
+  {
+    name: "Vinyl",
+    primary: "#3F292B",
+    secondary: "#DB7F67",
+    background: "#FFFBFC",
+    backgroundAccent: "#DBBEA1",
+  },
+  {
+    name: "Gardens",
+    primary: "#D81E5B",
+    secondary: "#4D5382",
+    background: "#FFFFFF",
+    backgroundAccent: "#F7EDE2",
   },
 ];
 

@@ -12,11 +12,13 @@
           <a class="link" href="tel:4348255038">
             <p>(434) 555-1234</p>
           </a>
-          <div class="flex gap-3">
-            <p class="btn mt-3">
-              <a href="/menu/charlottesville">View Menu</a>
-            </p>
-            <p class="btn mt-3"><a href="/menu">Order Online</a></p>
+          <div class="flex gap-3 mt-3">
+            <NuxtLink class="btn" to="/menu/charlottesville"
+              >View Menu</NuxtLink
+            >
+            <NuxtLink class="btn" to="/menu/charlottesville"
+              >Order Online</NuxtLink
+            >
           </div>
         </div>
         <div>
@@ -26,9 +28,13 @@
           <a class="link" href="tel:4348255038">
             <p>(434) 555-1234</p>
           </a>
-          <div class="flex gap-3">
-            <p class="btn mt-3"><a href="/menu/richmond">View Menu</a></p>
-            <p class="btn mt-3"><a href="/menu">Order Online</a></p>
+          <div class="flex gap-3 mt-3">
+            <NuxtLink class="btn" to="/menu/charlottesville"
+              >View Menu</NuxtLink
+            >
+            <NuxtLink class="btn" to="/menu/charlottesville"
+              >Order Online</NuxtLink
+            >
           </div>
         </div>
       </div>
