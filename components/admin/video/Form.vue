@@ -11,10 +11,10 @@
 
     <div class="flex gap-2">
       <button class="btn" @click="submitForm">
-        <p>{{ video ? "Update" : "Submit" }}</p>
+        {{ video ? "Update" : "Submit" }}
       </button>
       <button v-if="video" class="btn" @click="handleDeleteDocument">
-        <p>Delete</p>
+        Delete
       </button>
     </div>
   </div>

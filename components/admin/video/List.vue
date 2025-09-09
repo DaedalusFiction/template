@@ -29,9 +29,6 @@
           "
         >
           <p>{{ video.data().title || "No Title" }}</p>
-          <p>
-            video Date: {{ new Date(video.data().date).toLocaleDateString() }}
-          </p>
         </div>
         <div v-if="expandedItems[video.id]">
           <div class="p-3">
