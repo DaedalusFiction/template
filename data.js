@@ -16,7 +16,7 @@ const pages = [
 
 const socialMediaLinks = [
   { title: "Facebook", href: "https://facebook.com" },
-  { title: "Twitter", href: "https://google.com" },
+
   { title: "Instagram", href: "https://Instagram.com" },
 ];
 

@@ -9,27 +9,32 @@
           class="col-span-2 border-r bg-backgroundAccent dark:bg-backgroundAccentDarkMode"
         >
           <div
-            v-for="menuItem in menu"
-            @click="selectedPanel = menuItem.name"
-            :key="menuItem.name"
+            v-for="category in categories"
+            @click="selectedCategory = category"
+            :key="category.title"
             class="transition hover:bg-background dark:hover:bg-dark flex gap-2 w-full max-w-full p-2 cursor-pointer"
             :class="
-              menuItem.name === selectedPanel
+              category.title === selectedCategory.title
                 ? 'bg-background dark:bg-dark'
                 : 'bg-backgroundAccent dark:bg-backgroundAccentDarkMode'
             "
           >
-            <component :is="menuItem.icon" class="w-5 dark:stroke-white" />
-            <p>{{ menuItem.name }}</p>
+            <component :is="category.icon" class="w-5 dark:stroke-white" />
+            <p>{{ category.title }}</p>
           </div>
         </div>
         <div class="col-span-10 p-3">
-          <AdminBanner v-if="selectedPanel === 'Banner Message'" />
+          <AdminList
+            :category="selectedCategory"
+            :items="items"
+            @update="getDocuments(10, selectedCategory.collectionName)"
+          />
+          <!-- <AdminBanner v-if="selectedPanel === 'Banner Message'" />
           <AdminEventList v-if="selectedPanel === 'Events'" />
           <AdminArticleList v-if="selectedPanel === 'Articles'" />
           <AdminContributorList v-if="selectedPanel === 'Contributors'" />
           <AdminBookList v-if="selectedPanel === 'Portfolio'" />
-          <AdminVideoList v-if="selectedPanel === 'Videos'" />
+          <AdminVideoList v-if="selectedPanel === 'Videos'" /> -->
         </div>
       </div>
     </div>
@@ -39,26 +44,36 @@
 <script setup>
 import { auth, db, provider } from "~/firebase.config";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { doc, getDoc, setDoc } from "firebase/firestore";
+import {
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  limit,
+  orderBy,
+  query,
+  setDoc,
+} from "firebase/firestore";
 import { ref, markRaw } from "vue";
-import bookIcon from "~/components/icons/Book.vue";
-import userIcon from "~/components/icons/User.vue";
-import { AdminBanner } from "#components";
 
 definePageMeta({
   layout: "admin",
 });
 const admin = ref(false);
 const envelopeIcon = markRaw(resolveComponent("IconsEnvelope"));
-const menu = ref([
-  { name: "Events", icon: envelopeIcon },
-  { name: "Articles", icon: bookIcon },
-  { name: "Contributors", icon: userIcon },
-  { name: "Portfolio", icon: userIcon },
-  { name: "Videos", icon: userIcon },
-  { name: "Banner Message", icon: userIcon },
-]);
-const selectedPanel = ref("Events");
+const bookIcon = markRaw(resolveComponent("IconsBook"));
+const userIcon = markRaw(resolveComponent("IconsUser"));
+
+const categories = [
+  { title: "Events", icon: envelopeIcon, collectionName: "events" },
+  { title: "Articles", icon: bookIcon, collectionName: "articles" },
+  { title: "Contributors", icon: userIcon, collectionName: "contributors" },
+  { title: "Portfolio", icon: userIcon, collectionName: "portfolio" },
+  { title: "Videos", icon: userIcon, collectionName: "videos" },
+  { title: "Banner Message", icon: userIcon, collectionName: "banner" },
+];
+const selectedCategory = ref(categories[0]);
+const items = ref([]);
 
 const handleSignIn = async () => {
   const user = await login();
@@ -91,6 +106,28 @@ const login = async () => {
 
   return currentUser;
 };
+
+const getDocuments = async (total, collectionName) => {
+  const articlesRef = collection(db, collectionName);
+  const fetchedItems = await getDocs(
+    query(articlesRef, limit(total), orderBy("dateUploaded", "desc"))
+  );
+  items.value = fetchedItems.docs;
+};
+
+onMounted(async () => {
+  await getDocuments(10, selectedCategory.value.collectionName);
+});
+
+watch(
+  () => selectedCategory.value,
+  async () => {
+    items.value = [];
+    if (selectedCategory.value) {
+      await getDocuments(10, selectedCategory.value.collectionName);
+    }
+  }
+);
 </script>
 
 <style scoped>

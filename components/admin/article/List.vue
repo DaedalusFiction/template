@@ -54,7 +54,6 @@
 import { collection, getDocs, limit, orderBy, query } from "firebase/firestore";
 import { db } from "~/firebase.config";
 import { ref, reactive } from "vue";
-import { AdminArticleForm } from "#components";
 
 const articles = ref([]);
 const expandedItems = reactive({});
@@ -87,12 +86,8 @@ const toggleExpand = (articleId) => {
 };
 
 const handleRefreshList = (articleId) => {
-  if (articleId) {
-    getDocuments(numberOfShownDocuments.value);
-    toggleExpand(articleId);
-  } else {
-    toggleExpandNewDocument();
-  }
+  toggleExpandNewDocument();
+  getDocuments(numberOfShownDocuments.value);
 };
 </script>
 

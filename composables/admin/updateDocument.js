@@ -41,15 +41,12 @@ export default async function useUpdateDocument(
       );
     } else {
       try {
-        console.log("updating");
-        console.log(formData);
         await updateDoc(doc(db, collectionName, documentID), {
           ...formData,
           dateModified: Date.now(),
         });
         useSnackbar("Document updated");
       } catch (error) {
-        console.log(error.message);
         useSnackbar("Error creating article");
       }
     }
