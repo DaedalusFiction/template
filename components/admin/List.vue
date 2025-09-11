@@ -55,11 +55,31 @@
         </div>
         <div v-if="expandedItems[item.id]">
           <div class="p-3">
-            <AdminArticleForm :article="item" @update="updateList()" />
-            <AdminBookForm :book="item" @update="updateList()" />
-            <AdminContributorForm :contributor="item" @update="updateList()" />
-            <AdminEventForm :event="item" @update="updateList()" />
-            <AdminVideoForm :video="item" @update="updateList()" />
+            <AdminArticleForm
+              v-if="category.title === 'Articles'"
+              :article="item"
+              @update="updateList()"
+            />
+            <AdminBookForm
+              v-if="category.title === 'Portfolio'"
+              :book="item"
+              @update="updateList()"
+            />
+            <AdminContributorForm
+              v-if="category.title === 'Contributors'"
+              :contributor="item"
+              @update="updateList()"
+            />
+            <AdminEventForm
+              v-if="category.title === 'Events'"
+              :event="item"
+              @update="updateList()"
+            />
+            <AdminVideoForm
+              v-if="category.title === 'Videos'"
+              :video="item"
+              @update="updateList()"
+            />
           </div>
         </div>
       </div>

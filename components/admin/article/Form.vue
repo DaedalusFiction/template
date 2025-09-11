@@ -34,12 +34,17 @@
       />
     </div>
     <div class="flex gap-2">
-      <button class="btn" @click="submitForm">
-        {{ article ? "Update" : "Submit" }}
-      </button>
-      <button v-if="article" class="btn" @click="handleDeleteDocument">
-        Delete
-      </button>
+      <ButtonConfirm
+        @confirm="submitForm"
+        title="Submit"
+        text="Are you sure you want to create this item?"
+      />
+      <ButtonConfirm
+        v-if="article"
+        @confirm="handleDeleteDocument"
+        title="Delete"
+        text="Are you sure you want to delete this item?"
+      />
     </div>
   </div>
 </template>

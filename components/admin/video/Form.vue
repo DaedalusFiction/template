@@ -10,12 +10,17 @@
     </div>
 
     <div class="flex gap-2">
-      <button class="btn" @click="submitForm">
-        {{ video ? "Update" : "Submit" }}
-      </button>
-      <button v-if="video" class="btn" @click="handleDeleteDocument">
-        Delete
-      </button>
+      <ButtonConfirm
+        @confirm="submitForm"
+        title="Submit"
+        text="Are you sure you want to create this item?"
+      />
+      <ButtonConfirm
+        v-if="video"
+        @confirm="handleDeleteDocument"
+        title="Delete"
+        text="Are you sure you want to delete this item?"
+      />
     </div>
   </div>
 </template>
@@ -81,20 +86,15 @@ const handleDeleteDocument = async () => {
 };
 
 function getYouTubeEmbedUrl(url) {
-  // Handle different YouTube URL formats
   let videoId;
 
-  // Regular YouTube URL (watch?v=)
   const watchUrlPattern = /(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?#]+)/;
 
-  // YouTube Shorts URL
   const shortsUrlPattern = /youtube\.com\/shorts\/([^&\n?#]+)/;
 
-  // Try to match both patterns
   const watchMatch = url.match(watchUrlPattern);
   const shortsMatch = url.match(shortsUrlPattern);
 
-  // Extract video ID from whichever pattern matched
   if (watchMatch) {
     videoId = watchMatch[1];
   } else if (shortsMatch) {
@@ -103,7 +103,6 @@ function getYouTubeEmbedUrl(url) {
     throw new Error("Invalid YouTube URL");
   }
 
-  // Return the embed URL
   return `https://www.youtube.com/embed/${videoId}`;
 }
 </script>

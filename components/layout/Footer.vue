@@ -71,15 +71,17 @@
 
 <script setup>
 import { addDoc, arrayUnion, doc, updateDoc } from "firebase/firestore";
+import useSnackbar from "~/composables/showSnackbar";
 import { pages, siteName, socialMediaLinks } from "~/data";
 import { db } from "~/firebase.config";
 const email = ref("");
 const emailSubmitted = ref(false);
 
 const handleSubscribe = async () => {
-  const mailingListRef = doc(db, "newsletter", "mailinglist");
-  await updateDoc(mailingListRef, { subscribers: arrayUnion(email.value) });
+  useSnackbar("Thanks for Subscribing!");
   emailSubmitted.value = true;
+  // const mailingListRef = doc(db, "newsletter", "mailinglist");
+  // await updateDoc(mailingListRef, { subscribers: arrayUnion(email.value) });
 };
 </script>
 

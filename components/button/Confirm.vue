@@ -2,7 +2,7 @@
   <div>
     <button
       class="btn"
-      :class="critical ? 'bg-red-600 text-white' : 'bg-slate-300'"
+      :class="critical ? 'bg-red-600 text-white' : 'bg-secondary'"
       @click="handleOpenDialog"
     >
       {{ title }}
@@ -66,7 +66,7 @@
 </template>
 
 <script setup>
-defineProps(["action", "title", "text", "critical"]);
+defineProps(["title", "text", "critical"]);
 const emit = defineEmits(["confirm"]);
 const isDialogOpen = ref(false);
 const handleOpenDialog = () => {

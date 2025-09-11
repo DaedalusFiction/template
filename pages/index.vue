@@ -13,11 +13,14 @@
         class="flex lg:grid grid-cols-12 flex-col gap-6 max-w-screen-lg mx-auto"
       >
         <div class="flex flex-col gap-3 col-span-6">
-          <p class="text-xl font-bold uppercase text-center">Color Palettes</p>
+          <p class="text-xl font-bold uppercase text-center">
+            Step One: Choose a Color Palette
+          </p>
           <div
-            class="border lg:h-16 rounded-lg p-3 flex flex-col lg:flex-row justify-between items-center cursor-pointer hover:-translate-x-3 transition"
+            class="border lg:h-16 rounded-lg p-3 flex flex-col lg:flex-row justify-between items-center cursor-pointer hover:border-4 hover:border-secondary transition"
             :class="
-              paletteOption.name === selectedPalette.name && '-translate-x-3'
+              paletteOption.name === selectedPalette.name &&
+              'border-4 border-secondary'
             "
             v-for="(paletteOption, index) in paletteOptions"
             :style="`background:${paletteOption.background}`"
@@ -44,11 +47,14 @@
           </div>
         </div>
         <div class="flex flex-col gap-3 col-span-6">
-          <p class="text-xl font-bold uppercase text-center">Typefaces</p>
+          <p class="text-xl font-bold uppercase text-center">
+            Step Two: Choose a Typeface Pairing
+          </p>
           <div
-            class="border lg:h-16 bg-background rounded-lg p-3 flex flex-col lg:flex-row justify-between items-center cursor-pointer hover:translate-x-3 transition"
+            class="border lg:h-16 bg-background rounded-lg p-3 flex flex-col lg:flex-row justify-between items-center cursor-pointer hover:border-4 hover:border-secondary transition"
             :class="
-              typefaceOption.name === selectedTypeface.name && `translate-x-3`
+              typefaceOption.name === selectedTypeface.name &&
+              `border-4 border-secondary`
             "
             v-for="(typefaceOption, index) in typefaceOptions"
             :key="index"
@@ -74,7 +80,7 @@
           </div>
         </div>
       </div>
-      <p class="text-center italic mt-6">Or come up with your own!</p>
+      <p class="text-center italic font-bold mt-6">Or come up with your own!</p>
     </section>
     <section class="px-3 py-6 md:py-24">
       <div class="max-w-screen-xl mx-auto">
